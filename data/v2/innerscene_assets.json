@@ -1,0 +1,90 @@
+{
+  "assets": [
+    {
+      "id": "royal_palm",
+      "kind": "vegetation",
+      "provider": "innerscene",
+      "author": "Innerscene",
+      "license": "CC0-1.0",
+      "source_url": "https://www.innerscene.com/tools/library/3d-parts/royal-palm-20-m-aa0dd74b",
+      "status": "downloaded_and_verified",
+      "files": [
+        {
+          "path": "masters/innerscene/royal_palm.glb",
+          "url": "https://www.innerscene.com/api/library/royal-palm-20-m-aa0dd74b/download",
+          "bytes": 3463176,
+          "sha256": "e35c1176070f23c693f40dab59821c39f91fc6849bc762886f01ebe6b92afcd9"
+        }
+      ]
+    },
+    {
+      "id": "coconut_palm",
+      "kind": "vegetation",
+      "provider": "innerscene",
+      "author": "Innerscene",
+      "license": "CC0-1.0",
+      "source_url": "https://www.innerscene.com/tools/library/3d-parts/coconut-palm-with-curved-trunk-15-m-3ac10ffa",
+      "status": "downloaded_and_verified",
+      "files": [
+        {
+          "path": "masters/innerscene/coconut_palm.glb",
+          "url": "https://www.innerscene.com/api/library/coconut-palm-with-curved-trunk-15-m-3ac10ffa/download",
+          "bytes": 4716640,
+          "sha256": "0b580fbe641ad2a8512018c39d118fca509d4fc0e37612961deb9e6a7d58a521"
+        }
+      ]
+    },
+    {
+      "id": "travelers_palm",
+      "kind": "vegetation",
+      "provider": "innerscene",
+      "author": "Innerscene",
+      "license": "CC0-1.0",
+      "source_url": "https://www.innerscene.com/tools/library/3d-parts/traveller-s-palm-fan-of-leaves-8-m-65df30f0",
+      "status": "downloaded_and_verified",
+      "files": [
+        {
+          "path": "masters/innerscene/travelers_palm.glb",
+          "url": "https://www.innerscene.com/api/library/traveller-s-palm-fan-of-leaves-8-m-65df30f0/download",
+          "bytes": 525804,
+          "sha256": "2476428cd93b1eb4631f2c0f94cde659755a6ef741308b46f6f126892b9a1e43"
+        }
+      ]
+    },
+    {
+      "id": "areca_palm",
+      "kind": "vegetation",
+      "provider": "innerscene",
+      "author": "Innerscene",
+      "license": "CC0-1.0",
+      "source_url": "https://www.innerscene.com/tools/library/3d-parts/potted-areca-palm-aee9b13e",
+      "status": "downloaded_and_verified",
+      "files": [
+        {
+          "path": "masters/innerscene/areca_palm.glb",
+          "url": "https://www.innerscene.com/api/library/potted-areca-palm-aee9b13e/download",
+          "bytes": 2135732,
+          "sha256": "8e43f62a5d15058e90ee1b98fdb5ccb08959f3f445b339f0755fd222bea59aea"
+        }
+      ]
+    },
+    {
+      "id": "mature_date_palm",
+      "kind": "vegetation",
+      "provider": "innerscene",
+      "author": "Innerscene",
+      "license": "CC0-1.0",
+      "source_url": "https://www.innerscene.com/tools/library/3d-parts/mature-date-palm-tree-af8bdc6f",
+      "status": "downloaded_and_verified",
+      "files": [
+        {
+          "path": "masters/innerscene/mature_date_palm.glb",
+          "url": "https://www.innerscene.com/api/library/mature-date-palm-tree-af8bdc6f/download",
+          "bytes": 2473640,
+          "sha256": "d398cf43a4f69f03dcc00e321d5f7130f93d700245c7e9fcccf599de2fbfb528"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

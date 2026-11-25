@@ -6,8 +6,9 @@ const RAIN_AMOUNT := [0.0, 0.0, 0.0, 0.45, 0.93, 1.0, 0.0]
 const CLOUD_AMOUNT := [0.05, 0.35, 0.86, 0.78, 0.98, 1.0, 0.50]
 const WET_AMOUNT := [0.0, 0.0, 0.06, 0.62, 0.95, 1.0, 0.79]
 const SPEEDS := [1, 10, 30, 60]
-const LAND := "res://assets/polyhaven/"
-const SKY_NAMES := ["kloofendal_48d_partly_cloudy_puresky", "overcast_soil_puresky"]
+const LAND := "res://assets/runtime/hdri/"
+const SKY_NAMES := ["qwantani_noon_puresky", "kloofendal_overcast_puresky",
+	"qwantani_morning_puresky", "qwantani_dusk_1_puresky", "qwantani_night_puresky"]
 
 var clock_minutes := 908.0
 var clock_locked := true
@@ -33,13 +34,15 @@ var birds_sound: AudioStreamPlayer
 func _ready() -> void:
 	environment.background_mode = Environment.BG_SKY
 	environment.sky = Sky.new()
-	environment.sky.radiance_size = Sky.RADIANCE_SIZE_128
-	environment.sky.process_mode = Sky.PROCESS_MODE_QUALITY
-	environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	environment.tonemap_mode = Environment.TONE_MAPPER_FILMIC
+	environment.sky.radiance_size = Sky.RADIANCE_SIZE_64
+	environment.sky.process_mode = Sky.PROCESS_MODE_INCREMENTAL
+	environment.ambient_light_source = Environment.AMBIENT_SOURCE_BG
+	environment.ambient_light_sky_contribution = 0.24
+	environment.tonemap_mode = Environment.TONE_MAPPER_ACES
+	environment.tonemap_exposure = 0.88
 	for id in SKY_NAMES:
 		var panorama := PanoramaSkyMaterial.new()
-		panorama.panorama = load(LAND + id + "/" + id + "_2k.hdr")
+		panorama.panorama = load(LAND + id + ".hdr")
 		panoramas.append(panorama)
 	environment.sky.sky_material = panoramas[0]
 	var world := WorldEnvironment.new()
@@ -115,14 +118,24 @@ func update_world(dt: float, eye: Vector3, indoors: bool, snap := false) -> void
 	var solar_dir := Vector3(cos(phase), maxf(height_angle, .05), 0.32).normalized()
 	sun.look_at(sun.global_position - solar_dir, Vector3.UP)
 	sun.light_color = Color("#fff6e8").lerp(Color("#ffb375"), warm * 0.65)
-	sun.light_energy = 1.05 * daylight * (1.0 - cloudy * .79) + flash
+	sun.light_energy = 0.88 * daylight * (1.0 - cloudy * .79) + flash
 	sun.visible = not indoors
-	var sky_index := 1 if cloudy >= 0.59 else 0
+	var sky_index := 0
+	if clock_minutes < 344.0 or clock_minutes > 1210.0:
+		sky_index = 4
+	elif clock_minutes > 1080.0:
+		sky_index = 3
+	elif cloudy >= 0.59:
+		sky_index = 1
+	elif clock_minutes < 585.0:
+		sky_index = 2
 	if environment.sky.sky_material != panoramas[sky_index]:
 		environment.sky.sky_material = panoramas[sky_index]
-	environment.background_energy_multiplier = lerpf(0.023, 0.92, daylight) * (1.0 - cloudy * .23) + flash
+	# Exposure matches the differing radiance scales in the photographed sky probes.
+	var sky_exposure := [3.8, 0.94, 1.38, 0.20, 0.042]
+	environment.background_energy_multiplier = sky_exposure[sky_index] + flash
 	environment.ambient_light_color = Color("#445678").lerp(Color("#d4e2f5"), daylight).lerp(Color("#e9d7c1"), warm*.32)
-	environment.ambient_light_energy = 0.11 if indoors else lerpf(.15, .57, daylight) + flash
+	environment.ambient_light_energy = 0.11 if indoors else lerpf(.16, .48, daylight) + flash
 	environment.fog_enabled = not indoors and (rain_amount > .07 or cloudy > .68)
 	environment.fog_light_color = Color("#22314a").lerp(Color("#c6d9e6"), daylight)
 	environment.fog_density = 0.0007 + rain_amount * .0051
@@ -134,7 +147,8 @@ func update_world(dt: float, eye: Vector3, indoors: bool, snap := false) -> void
 		rain_sound.volume_db = linear_to_db(maxf(0.0001, rain_amount * (.08 if indoors else .42))) if ambient_audio else -80.0
 	if birds_sound.stream != null:
 		birds_sound.volume_db = linear_to_db(maxf(.0001, .18 * daylight * (1.0 - rain_amount))) if ambient_audio and not indoors else -80.0
-	context.road.albedo_color = Color("#939696").lerp(Color("#5e6267"), wetness*.72)
+	context.materials.grass.set_shader_parameter("wetness", wetness)
+	context.road.albedo_color = Color(0.86, 0.98, 1.10).lerp(Color("#717e8c"), wetness*.72)
 	context.road.roughness = lerpf(1.0, 0.47, wetness)
 	context.road.metallic_specular = lerpf(.30, .70, wetness)
 	for mat in context.night_panels:

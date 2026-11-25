@@ -1,107 +1,77 @@
 #!/usr/bin/env python3
-"""Download selected Poly Haven originals and verify against provider checksums."""
-import concurrent.futures
-import hashlib
+"""Fetch declared provider files into a resumable, verified staging directory."""
+from argparse import ArgumentParser
+from concurrent.futures import ThreadPoolExecutor
 import json
+import os
 from pathlib import Path
 import subprocess
+import time
 
-ROOT = Path(__file__).resolve().parents[1]
-USER_AGENT = "UTMKLCampusLifeResearch/0.1"
-ASSETS = {
-    "aerial_asphalt_01": "Campus roads",
-    "concrete_wall_008": "Menara Razak facade panels",
-    "painted_concrete": "Painted concrete and entrance",
-    "concrete_floor_02": "Entrance plinth and canopy structure",
-    "concrete_pavers": "Paths and plaza",
-    "grass_ground": "Landscape ground",
-    "red_laterite_soil_stones": "Planted beds",
-    "box_profile_metal_sheet": "Canopy cladding",
-    "interior_tiles": "Fictional reading room floor",
-    "old_wood_floor": "Fictional reading room furniture",
-    "palm_tree_bark": "Palm reference material",
-    "kloofendal_48d_partly_cloudy_puresky": "Clear-sky lighting",
-    "overcast_soil_puresky": "Overcast lighting",
-    "painted_wooden_bench": "Plaza and reading room seating",
-    "street_lamp_01": "Plaza lighting fixtures",
-    "island_tree_02": "Scanned tropical streetscape canopy",
-    "metal_trash_can": "Plaza furniture",
-    "planter_box_01": "Entrance furniture",
-}
-API = "https://api.polyhaven.com/"
+from asset_catalog import USER_AGENT
+from verify_assets import safe_target, verify
 
 
-def get(url, output=None):
-    cmd = ["curl", "-fLsS", "--retry", "1", "--max-time", "65", "-A", USER_AGENT]
-    if output is not None:
-        cmd.extend(["-o", str(output)])
-    return subprocess.run(cmd + [url], check=True, stdout=subprocess.PIPE).stdout
+def acquire(url, partial):
+    subprocess.run(
+        ["curl", "-fLsS", "--retry", "2", "--retry-delay", "2", "--max-time", "95",
+         "--continue-at", "-", "-A", USER_AGENT, "-o", str(partial), url],
+        check=True,
+    )
 
 
-def store_file(folder, name, info):
-    target = folder / name
-    target.parent.mkdir(parents=True, exist_ok=True)
-    if not target.is_file() or hashlib.md5(target.read_bytes()).hexdigest() != info["md5"]:
-        temp = target.with_suffix(target.suffix + ".download")
-        try:
-            get(info["url"], temp)
-            if hashlib.md5(temp.read_bytes()).hexdigest() != info["md5"]:
-                raise ValueError(f"Provider checksum mismatch for {name}")
-            temp.replace(target)
-        finally:
-            temp.unlink(missing_ok=True)
-    data = target.read_bytes()
-    record = dict(path=str(target.relative_to(ROOT)), bytes=len(data),
-                  sha256=hashlib.sha256(data).hexdigest(), download=info["url"])
-    if target.suffix.lower() in (".jpg", ".png"):
-        dimensions = subprocess.check_output(["identify", "-ping", "-format", "%w %h %[channels]", str(target)], text=True)
-        width, height, channels = dimensions.split(maxsplit=2)
-        record.update(width=int(width), height=int(height), channels=channels)
-    if target.suffix.lower() == ".hdr":
-        resolution = data.split(b"\n\n", 1)[1].split(b"\n", 1)[0].decode().split()
-        record.update(width=int(resolution[3]), height=int(resolution[1]), channels="RGBE")
-    return record
-
-
-def fetch(name, catalog):
-    meta = catalog[name]
-    variants = json.loads(get(API + "files/" + name))
-    folder = ROOT / "assets" / "polyhaven" / name
-    files = {}
-    if meta["type"] == 2:
-        model = variants["gltf"]["1k"]["gltf"]
-        files = {f"{name}.gltf": model, **model["include"]}
-    elif meta["type"] == 0:
-        files[f"{name}_2k.hdr"] = variants["hdri"]["2k"]["hdr"]
-    else:
-        for component, alias, extension in (("Diffuse", "albedo", "jpg"), ("nor_gl", "normal", "png"), ("Rough", "roughness", "jpg")):
-            files[f"{alias}.{extension}"] = variants[component]["1k"][extension]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        records = list(pool.map(lambda pair: store_file(folder, *pair), files.items()))
-    return dict(id=name, authors=meta["authors"], license="CC0-1.0",
-                source="https://polyhaven.com/a/" + name, intended_use=ASSETS[name],
-                resolution="2K" if meta["type"] == 0 else "1K", files=records)
+def fetch(item, staging):
+    root = staging / "masters" / item["provider"] / item["id"]
+    ordered = sorted(item["files"].items(), key=lambda entry: entry[0].endswith(".gltf"))
+    records = []
+    try:
+        for relative, spec in ordered:
+            target = safe_target(root, relative)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            temp = target.with_name(target.name + ".part")
+            if not target.is_file() or target.stat().st_size != spec["size"]:
+                if temp.is_file() and temp.stat().st_size > spec["size"]:
+                    temp.unlink()
+                if not temp.is_file() or temp.stat().st_size < spec["size"]:
+                    try:
+                        acquire(spec["url"], temp)
+                    except subprocess.CalledProcessError as error:
+                        if error.returncode != 33:
+                            raise
+                        temp.unlink(missing_ok=True)
+                        acquire(spec["url"], temp)
+                    time.sleep(0.18)
+                if temp.stat().st_size != spec["size"]:
+                    raise ValueError(f"incomplete transfer: {relative}")
+                os.replace(temp, target)
+            details = verify(target, spec)
+            records.append({"path": target.relative_to(staging).as_posix(), "url": spec["url"], **details})
+    except (ValueError, OSError, KeyError, subprocess.CalledProcessError) as error:
+        return None, {"id": item["id"], "reason": str(error)}
+    return {**item, "files": records, "status": "downloaded_and_verified"}, None
 
 
 def main():
-    catalog = json.loads(get(API + "assets"))
-    results = []
-    failures = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        jobs = {pool.submit(fetch, name, catalog): name for name in ASSETS}
-        for job in concurrent.futures.as_completed(jobs):
-            name = jobs[job]
-            try:
-                results.append(job.result())
-                print("Verified", name, flush=True)
-            except Exception as error:
-                failures.append(dict(id=name, error=str(error)))
-                print("Failed", name, error, flush=True)
-    manifest = {"license_source": "https://polyhaven.com/license",
-                "assets": sorted(results, key=lambda asset: asset["id"]), "failures": failures}
-    (ROOT / "data/assets_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    return bool(failures)
+    parser = ArgumentParser()
+    parser.add_argument("staging", type=Path)
+    parser.add_argument("--workers", type=int, default=3, choices=range(1, 5))
+    args = parser.parse_args()
+    catalog_path = args.staging / "catalog.json"
+    manifest = json.loads(catalog_path.read_text())
+    result = []
+    errors = list(manifest["errors"])
+    def process(item):
+        record, error = fetch(item, args.staging)
+        print("Verified" if record else "Failed", item["id"], error or "", flush=True)
+        return record, error
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        for record, error in pool.map(process, manifest["assets"]):
+            if record:
+                result.append(record)
+            else:
+                errors.append(error)
+    (args.staging / "downloaded.json").write_text(json.dumps({"assets": result, "errors": errors}, indent=2) + "\n")
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

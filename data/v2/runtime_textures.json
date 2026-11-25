@@ -1,0 +1,875 @@
+[
+  {
+    "id": "concrete_panels",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/concrete_panels",
+    "intended_use": "Menara slab bands and portal piers",
+    "uv_meters_approx": 2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/concrete_panels/albedo.jpg",
+        "source": "masters/polyhaven/concrete_panels/albedo.jpg",
+        "sha256": "f4f17bdfb87bf073be422ffb63434be25275713aaab428489d9c8cc28c85bc9d",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/concrete_panels/normal.png",
+        "source": "masters/polyhaven/concrete_panels/normal.jpg",
+        "sha256": "04ac59bb669500b3bba14180fbfa7b773c1d507ea2aea8ff28efa26f12d77dcb",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/concrete_panels/roughness.jpg",
+        "source": "masters/polyhaven/concrete_panels/roughness.jpg",
+        "sha256": "39d42d68f1b7312496ad538fb73e1109c303eba1f70e01113c6d1eb4f9758093",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/concrete_panels/ao.jpg",
+        "source": "masters/polyhaven/concrete_panels/ao.jpg",
+        "sha256": "8be44de52cf7bd32f94df1fc4342c191b5517798834f371366f9b4531da7a866",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "rectangular_facade_tiles_02",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/rectangular_facade_tiles_02",
+    "intended_use": "Menara portal cladding",
+    "uv_meters_approx": 2.0,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/rectangular_facade_tiles_02/albedo.jpg",
+        "source": "masters/polyhaven/rectangular_facade_tiles_02/albedo.jpg",
+        "sha256": "806de2745a7659b91167a9af85d061e71f4afe1bcba3e8a11f6a110d9a465ec4",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/rectangular_facade_tiles_02/normal.png",
+        "source": "masters/polyhaven/rectangular_facade_tiles_02/normal.jpg",
+        "sha256": "f8c2c86c09112961d8b43cfe5b290bb0d6dc10c2571960af5c4ba78e7800bdbd",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/rectangular_facade_tiles_02/roughness.jpg",
+        "source": "masters/polyhaven/rectangular_facade_tiles_02/roughness.jpg",
+        "sha256": "548a40531cf6116550f725bd453d33d8fb5efd5195392b237c20d603ffcd08e8",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/rectangular_facade_tiles_02/ao.jpg",
+        "source": "masters/polyhaven/rectangular_facade_tiles_02/ao.jpg",
+        "sha256": "0e1e4ae785a9a2f95427ccf1535292011ed3f5f9579838760465ba426314fb2f",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "anti_slip_concrete",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/anti_slip_concrete",
+    "intended_use": "Menara stair tread and gate plinth",
+    "uv_meters_approx": 2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/anti_slip_concrete/albedo.jpg",
+        "source": "masters/polyhaven/anti_slip_concrete/albedo.jpg",
+        "sha256": "d54e7182491fa67824ae1afd7e860b70a8f1f4781f72981fc73dc97457024e75",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/anti_slip_concrete/normal.png",
+        "source": "masters/polyhaven/anti_slip_concrete/normal.jpg",
+        "sha256": "24bde5de80dc61878888fad6b443804c56a2d1d206750cee000f9f8d1213e598",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/anti_slip_concrete/roughness.jpg",
+        "source": "masters/polyhaven/anti_slip_concrete/roughness.jpg",
+        "sha256": "678eb4f837fcb317371597fc087dbc704b0a6f902f16c786c431ab39791c633f",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/anti_slip_concrete/ao.jpg",
+        "source": "masters/polyhaven/anti_slip_concrete/ao.jpg",
+        "sha256": "6df46be53aab4d04550cd8749925e1603be0d3dc41ce5762781d74b219ea98e9",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "brushed_concrete_03",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/brushed_concrete_03",
+    "intended_use": "MJIIT piers and shade-slab faces",
+    "uv_meters_approx": 2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/brushed_concrete_03/albedo.jpg",
+        "source": "masters/polyhaven/brushed_concrete_03/albedo.jpg",
+        "sha256": "c93ecb469bd34a4a1c8f20b91ed218058eca365c3a10cbe6a19f527d79b38cee",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/brushed_concrete_03/normal.png",
+        "source": "masters/polyhaven/brushed_concrete_03/normal.jpg",
+        "sha256": "8e0da532b0b794db167c3e0addea61beaf7dfd3d7c48310d6efedb66c22d3c9f",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/brushed_concrete_03/roughness.jpg",
+        "source": "masters/polyhaven/brushed_concrete_03/roughness.jpg",
+        "sha256": "3b9f47ea81a7eda43f2dd31aa73e42c80de46f0b614d7f2d19936c8f9db5b94a",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/brushed_concrete_03/ao.jpg",
+        "source": "masters/polyhaven/brushed_concrete_03/ao.jpg",
+        "sha256": "9f47366af99d4442cd0605bb6645a6eede3ed53047978e4baf23089776cca2e2",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "metal_plate_02",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/metal_plate_02",
+    "intended_use": "Architectural metalwork",
+    "uv_meters_approx": 2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/metal_plate_02/albedo.jpg",
+        "source": "masters/polyhaven/metal_plate_02/albedo.jpg",
+        "sha256": "ab2e945e20bdb541c4cfd028bbf7e51be759cf042ac3efd5755e7eca513b2640",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/metal_plate_02/normal.png",
+        "source": "masters/polyhaven/metal_plate_02/normal.jpg",
+        "sha256": "105f471585e2956abb98c2f040b715405cb0107804341ed91c110f8f66b11e76",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/metal_plate_02/roughness.jpg",
+        "source": "masters/polyhaven/metal_plate_02/roughness.jpg",
+        "sha256": "f1c1e80f3a5d1255bf6f1ba0cadb688b8caf93771d7a89574e8aa7dd02c631cd",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/metal_plate_02/ao.jpg",
+        "source": "masters/polyhaven/metal_plate_02/ao.jpg",
+        "sha256": "1447a270b4ef6446217617a337885965683f5d50cc94cdeca12c78952cbb1337",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "metallic": {
+        "path": "assets/runtime/materials/metal_plate_02/metallic.jpg",
+        "source": "masters/polyhaven/metal_plate_02/metallic.jpg",
+        "sha256": "0e04b72dd180348edc5e57596597df8d2ebe1b757d8f6505e38e09b064ad99b1",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "painted_plaster_wall",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/painted_plaster_wall",
+    "intended_use": "MJIIT painted wall base",
+    "uv_meters_approx": 2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/painted_plaster_wall/albedo.jpg",
+        "source": "masters/polyhaven/painted_plaster_wall/albedo.jpg",
+        "sha256": "77c149ec88a3a69bcc08ee3fd26821f8f0e2ccae271103c8d9c27bee3fa09838",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/painted_plaster_wall/normal.png",
+        "source": "masters/polyhaven/painted_plaster_wall/normal.jpg",
+        "sha256": "e30b2a7c66fbcbe23609856ba24d855a4f48b23a7aafbc89a309e576686eb885",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/painted_plaster_wall/roughness.jpg",
+        "source": "masters/polyhaven/painted_plaster_wall/roughness.jpg",
+        "sha256": "02181a3b83b53105630b122df7ad0e47d273dd05fe7f35a9f282469bf2fca509",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/painted_plaster_wall/ao.jpg",
+        "source": "masters/polyhaven/painted_plaster_wall/ao.jpg",
+        "sha256": "1dea5386b3d23c099abea062c436e9651b095f20d8f6d27b260ad445f19480f0",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "asphalt_03",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/asphalt_03",
+    "intended_use": "Campus roads and parking",
+    "uv_meters_approx": 4,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/asphalt_03/albedo.jpg",
+        "source": "masters/polyhaven/asphalt_03/albedo.jpg",
+        "sha256": "985f153ac6ed174ece968c84dbdc0aa8779bef2b5d797d1f85302ca4ae95506e",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/asphalt_03/normal.png",
+        "source": "masters/polyhaven/asphalt_03/normal.jpg",
+        "sha256": "993d27948ef8813fd1a9c3d1dec53c687ff30b057ba40713255cc8ac70a2eff4",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/asphalt_03/roughness.jpg",
+        "source": "masters/polyhaven/asphalt_03/roughness.jpg",
+        "sha256": "9b07a2de136e223f6bc5bff53fa230863f136ff836320deccf96fe9092c63606",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/asphalt_03/ao.jpg",
+        "source": "masters/polyhaven/asphalt_03/ao.jpg",
+        "sha256": "4e5af510d517ecbdad52f9915b0315e19fa7532db1a7138e543c94df7823397e",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "worn_asphalt",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/worn_asphalt",
+    "intended_use": "Campus road repair zones",
+    "uv_meters_approx": 5,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/worn_asphalt/albedo.jpg",
+        "source": "masters/polyhaven/worn_asphalt/albedo.jpg",
+        "sha256": "f3d306b5f26751554249cbc5fbc8b79b50278596b66d22a3e7bd4dc43b4f8bfa",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/worn_asphalt/normal.png",
+        "source": "masters/polyhaven/worn_asphalt/normal.jpg",
+        "sha256": "0411e28112bd34d10e951716c42b453c9c4abeb3ab034cc9672cfafb9680a96d",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/worn_asphalt/roughness.jpg",
+        "source": "masters/polyhaven/worn_asphalt/roughness.jpg",
+        "sha256": "28bc41619c3aaf3f7e7b0adb48ea5505c10cd4bf90eb4aa07026ad2269da1e23",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/worn_asphalt/ao.jpg",
+        "source": "masters/polyhaven/worn_asphalt/ao.jpg",
+        "sha256": "244ffc67b48d098bf61675e87ade7d528df45fd8b2888a1a3f75ef4f55e33222",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "grey_stone_path",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/grey_stone_path",
+    "intended_use": "Entrance and plaza paving",
+    "uv_meters_approx": 2.2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/grey_stone_path/albedo.jpg",
+        "source": "masters/polyhaven/grey_stone_path/albedo.jpg",
+        "sha256": "7d67a5364a5eabc08e3bf15f4d8a70c42ce65c24cc8209faec045e8758f24e08",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/grey_stone_path/normal.png",
+        "source": "masters/polyhaven/grey_stone_path/normal.jpg",
+        "sha256": "fecff1bc11ca5a0937ce32d9cb195c34ed2f878c82ba19eaf2285c74c1e8c63b",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/grey_stone_path/roughness.jpg",
+        "source": "masters/polyhaven/grey_stone_path/roughness.jpg",
+        "sha256": "2485e3b3246901e67104d603bf8c7af4ad66ad89b20c56cbb35cb6105d0170f2",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/grey_stone_path/ao.jpg",
+        "source": "masters/polyhaven/grey_stone_path/ao.jpg",
+        "sha256": "c3ed3f836c4e61fe9550afe96fab4d10f7bd424baf97171901cc411a799fd1f4",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "interlocking_concrete_pavers",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/interlocking_concrete_pavers",
+    "intended_use": "Campus footways",
+    "uv_meters_approx": 3,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/interlocking_concrete_pavers/albedo.jpg",
+        "source": "masters/polyhaven/interlocking_concrete_pavers/albedo.jpg",
+        "sha256": "a06d5e231d6231b976b654981c0164c5929dcba6730953e75bbf4956b08956d9",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/interlocking_concrete_pavers/normal.png",
+        "source": "masters/polyhaven/interlocking_concrete_pavers/normal.jpg",
+        "sha256": "20aa6eec0251ff77cef212dfbae556b127d6191bad867a3f04d04ae9ed9b0e28",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/interlocking_concrete_pavers/roughness.jpg",
+        "source": "masters/polyhaven/interlocking_concrete_pavers/roughness.jpg",
+        "sha256": "9cac3e33315b6ba01cf424e65759c3ddffe706e2fdf891b1d920a3ddb466e8e6",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/interlocking_concrete_pavers/ao.jpg",
+        "source": "masters/polyhaven/interlocking_concrete_pavers/ao.jpg",
+        "sha256": "71ae98fec97db2fa8dfeac06e154e3bde3be96a474e621a9efa29cd33612826d",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "leafy_grass",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/leafy_grass",
+    "intended_use": "Fine-scale campus turf",
+    "uv_meters_approx": 3.7,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/leafy_grass/albedo.jpg",
+        "source": "masters/polyhaven/leafy_grass/albedo.jpg",
+        "sha256": "6f74c9c50e625b9ca5acd51e76e7acdfc63b8c239db90169e354f2dff1422264",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/leafy_grass/normal.png",
+        "source": "masters/polyhaven/leafy_grass/normal.jpg",
+        "sha256": "00415693638bb9f970b61c1ab6db624ea000892c94290c3419d3002a2875654d",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/leafy_grass/roughness.jpg",
+        "source": "masters/polyhaven/leafy_grass/roughness.jpg",
+        "sha256": "95474f379033eb1b2ad293df14702acd5a2991997e1d78342944232932f9f780",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/leafy_grass/ao.jpg",
+        "source": "masters/polyhaven/leafy_grass/ao.jpg",
+        "sha256": "482eee1baef8c50caed80fbd9cde3faaafcec22efb5a74d5163f1e2da67b03eb",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "aerial_grass_rock",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/aerial_grass_rock",
+    "intended_use": "Site-wide scanned turf variation",
+    "uv_meters_approx": 15,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/aerial_grass_rock/albedo.jpg",
+        "source": "masters/polyhaven/aerial_grass_rock/albedo.jpg",
+        "sha256": "b1de55fde7fec0379994df5b9ad2d9130f9766f27d667a94390bde45bff6bcf6",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/aerial_grass_rock/normal.png",
+        "source": "masters/polyhaven/aerial_grass_rock/normal.jpg",
+        "sha256": "254fca236b702fb7cdc415eec8d1ca90c20d640cfc7f54d68730261094e51d01",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/aerial_grass_rock/roughness.jpg",
+        "source": "masters/polyhaven/aerial_grass_rock/roughness.jpg",
+        "sha256": "443d3d2cbb42edb37528f3bc21d75939a0cff8ad9083549c350c7d6e2887ada9",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/aerial_grass_rock/ao.jpg",
+        "source": "masters/polyhaven/aerial_grass_rock/ao.jpg",
+        "sha256": "d9e9a4cd65d731641495d8a8c893cb1f92a751aa71a6ed8ee7e4712f4a0decf8",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "forest_ground_05",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/forest_ground_05",
+    "intended_use": "Tree and planting beds",
+    "uv_meters_approx": 3.3,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/forest_ground_05/albedo.jpg",
+        "source": "masters/polyhaven/forest_ground_05/albedo.jpg",
+        "sha256": "723b8863adbc7edfd29073841d1ab5b367deea66a9ca01a00212961d0f75d9ab",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/forest_ground_05/normal.png",
+        "source": "masters/polyhaven/forest_ground_05/normal.jpg",
+        "sha256": "8da2f69d7c5ce4ef1218002121567eb0d82522773ac78609dbe7d2abe048208b",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/forest_ground_05/roughness.jpg",
+        "source": "masters/polyhaven/forest_ground_05/roughness.jpg",
+        "sha256": "df14538d38ff72afec25bd4f3219288b7f0377b1fde45a96a4dc16245748b067",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/forest_ground_05/ao.jpg",
+        "source": "masters/polyhaven/forest_ground_05/ao.jpg",
+        "sha256": "75047ea99f66cd9c80ae377d509a6f6f429ecba97f6657ad893d0421ec518ce7",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "gravel_embedded_concrete",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/gravel_embedded_concrete",
+    "intended_use": "Curbs and concrete hardscape",
+    "uv_meters_approx": 2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/gravel_embedded_concrete/albedo.jpg",
+        "source": "masters/polyhaven/gravel_embedded_concrete/albedo.jpg",
+        "sha256": "c5716f5d9a1d3cb14d6f8ef487b51763bc3d11c3287b5149435a402280bb0c73",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/gravel_embedded_concrete/normal.png",
+        "source": "masters/polyhaven/gravel_embedded_concrete/normal.jpg",
+        "sha256": "6470c34b31e32addecbdb8c1fc7146d6e52ee57ec47ea15970e578060f5f28be",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/gravel_embedded_concrete/roughness.jpg",
+        "source": "masters/polyhaven/gravel_embedded_concrete/roughness.jpg",
+        "sha256": "e00f7273e22fc965eef42013391ef468b4b1c53490dba50af72aa299b0c71a2e",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/gravel_embedded_concrete/ao.jpg",
+        "source": "masters/polyhaven/gravel_embedded_concrete/ao.jpg",
+        "sha256": "e70ab09ded87dd845c6ac9f9111d75c8d283e7100709bdbea925bedf9f975c4b",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "concrete_moss",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/concrete_moss",
+    "intended_use": "Localized planted edging",
+    "uv_meters_approx": 1.8,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/concrete_moss/albedo.jpg",
+        "source": "masters/polyhaven/concrete_moss/albedo.jpg",
+        "sha256": "4199dd4d75b2e0004be89967a73d5226f164d3f523a585ae0a9b7dc582f3ca90",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/concrete_moss/normal.png",
+        "source": "masters/polyhaven/concrete_moss/normal.jpg",
+        "sha256": "f9a8b8f3a5f2e6f34732071d77a8468016918a8cb62ea44d1dfe7682fe233855",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/concrete_moss/roughness.jpg",
+        "source": "masters/polyhaven/concrete_moss/roughness.jpg",
+        "sha256": "7fb9c7f5694345fe1768a50bf3ed3cbdd7ea749756ec4714041997da3ae15c33",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/concrete_moss/ao.jpg",
+        "source": "masters/polyhaven/concrete_moss/ao.jpg",
+        "sha256": "3cc9151e876cb018cc748757cdeb14f0d19fab7728e637b3ebe9bcb9a66e980d",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "anti_skid_tiles",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/anti_skid_tiles",
+    "intended_use": "Granite-look exterior entry treads",
+    "uv_meters_approx": 1.8,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/anti_skid_tiles/albedo.jpg",
+        "source": "masters/polyhaven/anti_skid_tiles/albedo.jpg",
+        "sha256": "2153dc377035c19dc15193fb87371e8d786b97c54045420815290db375589bdf",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/anti_skid_tiles/normal.png",
+        "source": "masters/polyhaven/anti_skid_tiles/normal.jpg",
+        "sha256": "3d159957229c6b07b7aebf2c2ea7df4f895d2e287505cf489ab8d8c341ff93e2",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/anti_skid_tiles/roughness.jpg",
+        "source": "masters/polyhaven/anti_skid_tiles/roughness.jpg",
+        "sha256": "6d395aa00d4f591b0ac3e9fbdb6cc157e0fcb7d6de1bc8d31e07d43b12e84fbf",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/anti_skid_tiles/ao.jpg",
+        "source": "masters/polyhaven/anti_skid_tiles/ao.jpg",
+        "sha256": "7cf0c1dc71535e222b0cc269d72f013ab76ca40400f5451f963bd55752a66ed6",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "grey_roof_tiles",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/grey_roof_tiles",
+    "intended_use": "Roof material study",
+    "uv_meters_approx": 2.6,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/grey_roof_tiles/albedo.jpg",
+        "source": "masters/polyhaven/grey_roof_tiles/albedo.jpg",
+        "sha256": "9aa775ad75f0f25038c43c0f4790d29fc3f2fb175f08982cfbb4a93e585a0747",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/grey_roof_tiles/normal.png",
+        "source": "masters/polyhaven/grey_roof_tiles/normal.jpg",
+        "sha256": "3d110b2c5d583cc4be165156c8ee76e665662a3e045f96c986d8742217d2d582",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/grey_roof_tiles/roughness.jpg",
+        "source": "masters/polyhaven/grey_roof_tiles/roughness.jpg",
+        "sha256": "f94a71be9b65a4fc234b87c817bcfdceba62a0c08fd10be908a5da8c9c3a293f",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/grey_roof_tiles/ao.jpg",
+        "source": "masters/polyhaven/grey_roof_tiles/ao.jpg",
+        "sha256": "5330cd64be4b05808b26e1236a9db11edc2efa94bb2dcd45d6c748dcfd5c24ad",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "metal_grate_rusty",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/metal_grate_rusty",
+    "intended_use": "Slot-drain frames",
+    "uv_meters_approx": 1.4,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/metal_grate_rusty/albedo.jpg",
+        "source": "masters/polyhaven/metal_grate_rusty/albedo.jpg",
+        "sha256": "d8dfc1febb5e95a3512154815005ad588572e6cefb7dd84e5e673c6041139817",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/metal_grate_rusty/normal.png",
+        "source": "masters/polyhaven/metal_grate_rusty/normal.jpg",
+        "sha256": "5b4f3777447f0a9f8a7a92268d93759bb2b251d990888303fbf90669fb220aa4",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/metal_grate_rusty/roughness.jpg",
+        "source": "masters/polyhaven/metal_grate_rusty/roughness.jpg",
+        "sha256": "d0a8a4ee2f68022316305a6ac02b16d0c23647a493e23032e27327a461be22ab",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/metal_grate_rusty/ao.jpg",
+        "source": "masters/polyhaven/metal_grate_rusty/ao.jpg",
+        "sha256": "ca83a5152d23067e7fd4c61c7bb30956871529e81581b2355a46d5251c948c71",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "metallic": {
+        "path": "assets/runtime/materials/metal_grate_rusty/metallic.jpg",
+        "source": "masters/polyhaven/metal_grate_rusty/metallic.jpg",
+        "sha256": "c540cf6437bc7016a59ecf3616bea42f4e4b5f1ce5378711b9b1d96161848378",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  },
+  {
+    "id": "red_brick_pavers",
+    "license": "CC0-1.0",
+    "source_url": "https://polyhaven.com/a/red_brick_pavers",
+    "intended_use": "Decorative access-path borders",
+    "uv_meters_approx": 2.2,
+    "channels": {
+      "albedo": {
+        "path": "assets/runtime/materials/red_brick_pavers/albedo.jpg",
+        "source": "masters/polyhaven/red_brick_pavers/albedo.jpg",
+        "sha256": "0aaf607f0304ae0be9ace154503924f4d53c5100266e422a3ffa06970459b6fa",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "normal": {
+        "path": "assets/runtime/materials/red_brick_pavers/normal.png",
+        "source": "masters/polyhaven/red_brick_pavers/normal.jpg",
+        "sha256": "b1b3ebdb217970843d631dedd8d92f002f4a2ecdf1a2a1aa50882fbc92a6b3c1",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "roughness": {
+        "path": "assets/runtime/materials/red_brick_pavers/roughness.jpg",
+        "source": "masters/polyhaven/red_brick_pavers/roughness.jpg",
+        "sha256": "0b5fedad23147e47b000d2183433a3e133f90f6562fce61ba84b81aa1f432c3f",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      "ao": {
+        "path": "assets/runtime/materials/red_brick_pavers/ao.jpg",
+        "source": "masters/polyhaven/red_brick_pavers/ao.jpg",
+        "sha256": "84bfea118b96473be09b1e02e7494e9cd84709cf3b94c12abab324eb49cce674",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    }
+  }
+]

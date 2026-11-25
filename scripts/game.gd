@@ -716,6 +716,24 @@ func capture_view(out: String, view: String, camera: Camera3D) -> Error:
 	elif view == "mjiit":
 		eye = site.world_point(Vector2(49, 55), 1.80)
 		target = Vector3(125, 10.0, 44)
+	elif view == "gate":
+		eye = site.world_point(Vector2(-83, -16), 1.65)
+		target = Vector3(-37, 12, -1)
+	elif view == "menara_north":
+		eye = Vector3(29, 22, -77)
+		target = Vector3(14, 23, 2)
+	elif view == "menara_east":
+		eye = Vector3(101, 18, 15)
+		target = Vector3(16, 22, 8)
+	elif view == "menara_west":
+		eye = Vector3(-82, 20, 59)
+		target = Vector3(10, 25, 8)
+	elif view == "menara_ground":
+		eye = site.world_point(Vector2(-50, 39), 1.70)
+		target = Vector3(7, 20.5, 3)
+	elif view == "menara_back":
+		eye = Vector3(79, 38, -58)
+		target = Vector3(21, 29, 5)
 	elif view == "entry":
 		eye = site.world_point(Vector2(-23, 27), 1.76)
 		target = Vector3(-1, -0.2, 12)
@@ -731,7 +749,7 @@ func capture_view(out: String, view: String, camera: Camera3D) -> Error:
 	camera.look_at(target, Vector3.UP)
 	camera.current = true
 	site.set_lod(eye)
-	for frame in 6:
+	for frame in 3:
 		await RenderingServer.frame_post_draw
 	var image := get_viewport().get_texture().get_image()
 	var code := image.save_png(out + "/utmkl-" + view + ".png")
