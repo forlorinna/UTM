@@ -1,0 +1,140 @@
+name: UTMKL Android APK
+
+on:
+  push:
+    branches: [utmkl-campus-life]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  android-release:
+    if: github.ref == 'refs/heads/utmkl-campus-life'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      GODOT_VERSION: '4.7.2'
+      ANDROID_BUILD_TOOLS_VERSION: '36.0.0'
+      APK_NAME: UTMKL-Campus-Life-arm64.apk
+
+    steps:
+      - name: Check out the game source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Android, Godot and the CI test signing key
+        shell: bash
+        run: |
+          set -euo pipefail
+          sdk_root="${ANDROID_HOME:?GitHub runner Android SDK is unavailable}"
+          java_home="${JAVA_HOME_21_X64:?GitHub runner JDK 21 is unavailable}"
+          export JAVA_HOME="$java_home"
+          export PATH="$JAVA_HOME/bin:$PATH"
+          command -v rg >/dev/null || { sudo apt-get update && sudo apt-get install -y ripgrep; }
+          sdkmanager --sdk_root="$sdk_root" 'platforms;android-36' "build-tools;$ANDROID_BUILD_TOOLS_VERSION"
+
+          tools_dir="$RUNNER_TEMP/utmkl-tools"
+          config_dir="$RUNNER_TEMP/utmkl-config"
+          data_dir="$RUNNER_TEMP/utmkl-data"
+          engine_name="Godot_v$GODOT_VERSION-stable_linux.x86_64"
+          template_dir="$data_dir/godot/export_templates/$GODOT_VERSION.stable"
+          release_url="https://github.com/godotengine/godot-builds/releases/download/$GODOT_VERSION-stable"
+          mkdir -p "$tools_dir" "$config_dir/godot" "$template_dir"
+          curl --fail --silent --show-error --location --retry 4 \
+            --output "$tools_dir/godot.zip" "$release_url/$engine_name.zip"
+          unzip -j "$tools_dir/godot.zip" "$engine_name" -d "$tools_dir"
+          chmod +x "$tools_dir/$engine_name"
+          curl --fail --silent --show-error --location --retry 4 \
+            --output "$tools_dir/templates.tpz" "$release_url/Godot_v$GODOT_VERSION-stable_export_templates.tpz"
+          unzip -j "$tools_dir/templates.tpz" templates/android_debug.apk -d "$template_dir"
+          rm -- "$tools_dir/godot.zip" "$tools_dir/templates.tpz"
+
+          key_path="$RUNNER_TEMP/utmkl-ci-debug.keystore"
+          keytool -genkeypair -keystore "$key_path" -alias androiddebugkey \
+            -storepass android -keypass android -dname 'CN=UTMKL Campus Life CI Test' \
+            -keyalg RSA -keysize 2048 -validity 365
+
+          godot_minor="${GODOT_VERSION%.*}"
+          cat > "$config_dir/godot/editor_settings-$godot_minor.tres" <<SETTINGS
+          [gd_resource type="EditorSettings" format=3]
+
+          [resource]
+          export/android/android_sdk_path = "$sdk_root"
+          export/android/java_sdk_path = "$java_home"
+          export/android/debug_keystore = "$key_path"
+          export/android/debug_keystore_user = "androiddebugkey"
+          export/android/debug_keystore_pass = "android"
+          SETTINGS
+          {
+            printf 'GODOT_BIN=%s\n' "$tools_dir/$engine_name"
+            printf 'JAVA_HOME=%s\n' "$java_home"
+            printf 'ANDROID_SDK_ROOT=%s\n' "$sdk_root"
+            printf 'ANDROID_BUILD_TOOLS=%s\n' "$sdk_root/build-tools/$ANDROID_BUILD_TOOLS_VERSION"
+            printf 'XDG_CONFIG_HOME=%s\n' "$config_dir"
+            printf 'XDG_DATA_HOME=%s\n' "$data_dir"
+          } >> "$GITHUB_ENV"
+
+      - name: Build and verify ARM64 APK
+        shell: bash
+        run: |
+          BUILD_LOG_DIR="$RUNNER_TEMP/utmkl-build-logs" tools/build_android.sh "$RUNNER_TEMP/dist/$APK_NAME"
+          grep -F 'Verified using v2 scheme (APK Signature Scheme v2): true' \
+            "$RUNNER_TEMP/utmkl-build-logs/apk-signature.log"
+          (cd "$RUNNER_TEMP/dist" && sha256sum -c "$APK_NAME.sha256")
+
+      - name: Show build diagnostics on failure
+        if: failure()
+        shell: bash
+        run: |
+          for log in "$RUNNER_TEMP"/utmkl-build-logs/*.log; do
+            if [[ -f "$log" ]]; then
+              printf '\n%s\n' "${log##*/}"
+              tail -n 60 "$log"
+            fi
+          done
+
+      - name: Publish Release and validate its public APK download
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          tag="utmkl-ci-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          apk="$RUNNER_TEMP/dist/$APK_NAME"
+          expected_size="$(stat -c %s "$apk")"
+          expected_sha="$(sha256sum "$apk" | cut -d ' ' -f 1)"
+
+          notes="$RUNNER_TEMP/utmkl-release-notes.md"
+          printf '%s\n\n%s\n\n%s\n' \
+            'ARM64 Android offline test build.' \
+            "Source commit: $GITHUB_SHA." \
+            'Each CI run uses a new debug test key. A build with a different signing certificate requires a fresh install.' > "$notes"
+
+          gh release create "$tag" --draft --prerelease --latest=false \
+            --target "$GITHUB_SHA" --title "UTMKL Android CI $GITHUB_RUN_NUMBER" --notes-file "$notes"
+          gh release upload "$tag" "$apk" "$apk.sha256"
+
+          release_api="$(gh release view "$tag" --json apiUrl --jq .apiUrl)"
+          assets="$(gh api "$release_api")"
+          jq -e --arg name "$APK_NAME" --arg sha "sha256:$expected_sha" --argjson size "$expected_size" '
+            any(.assets[]; .name == $name and .state == "uploaded" and .size == $size and .digest == $sha)
+            and any(.assets[]; .name == ($name + ".sha256") and .state == "uploaded")' <<< "$assets"
+          gh release edit "$tag" --draft=false --latest=false
+
+          release="$(gh api "$release_api")"
+          download_url="$(jq -er --arg name "$APK_NAME" '
+            select(.draft == false) | .assets[] | select(.name == $name) | .browser_download_url' <<< "$release")"
+          release_page="$(jq -er .html_url <<< "$release")"
+          download="$RUNNER_TEMP/utmkl-public.apk"
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors \
+            --output "$download" "$download_url"
+          printf '%s  %s\n' "$expected_sha" "$download" | sha256sum -c -
+          {
+            printf '### Verified Android build\n\n'
+            printf -- '- [Download ARM64 APK](%s)\n' "$download_url"
+            printf -- '- [GitHub Release](%s)\n' "$release_page"
+            printf -- '- SHA256: `%s`\n' "$expected_sha"
+          } >> "$GITHUB_STEP_SUMMARY"
