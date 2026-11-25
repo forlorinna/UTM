@@ -1,0 +1,23 @@
+config_version=5
+
+[application]
+config/name="UTMKL Campus Life"
+run/main_scene="res://scenes/campus.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/description="Independent offline campus exploration sample"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/handheld/orientation=4
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="mobile"
+textures/vram_compression/import_etc2_astc=true
+textures/default_filters/use_nearest_mipmap_filter=false
+lights_and_shadows/directional_shadow/size=2048
+
+[internationalization]
+locale/translations=PackedStringArray("res://assets/i18n/ui.en.translation", "res://assets/i18n/ui.zh_CN.translation", "res://assets/i18n/ui.ms.translation")

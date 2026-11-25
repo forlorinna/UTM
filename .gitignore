@@ -1,0 +1,6 @@
+.godot/
+out/
+*.apk
+*.keystore
+art/*.blend1
+__pycache__/

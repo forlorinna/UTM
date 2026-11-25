@@ -1,0 +1,61 @@
+keys,en,zh_CN,ms
+Map  M,Map  M,地图  M,Peta  M
+Photo  C,Photo  C,摄影  C,Foto  C
+Settings  Esc,Settings  Esc,设置  Esc,Tetapan  Esc
+Room,Room,阅览室,Bilik
+Car,Car,车辆,Kereta
+View,View,视角,Pandangan
+Fly,Fly,飞行,Terbang
+Independent offline campus sample,Independent offline campus sample,独立离线校区样板,Sampel kampus luar talian
+Time in Kuala Lumpur,Time in Kuala Lumpur,吉隆坡时间,Masa di Kuala Lumpur
+Lock,Lock,锁定,Kunci
+Time rate,Time rate,时间倍率,Kadar masa
+Weather,Weather,天气,Cuaca
+Graphics,Graphics,画质,Grafik
+Lightning flashes,Lightning flashes,闪电光效,Kilatan petir
+Ambient audio,Ambient audio,环境声音,Bunyi persekitaran
+Invert vertical look,Invert vertical look,反转垂直视角,Terbalikkan pandangan
+Look sensitivity,Look sensitivity,视角灵敏度,Kepekaan pandangan
+Language,Language,语言,Bahasa
+Visit,Visit,前往,Lawat
+Forecourt,Forecourt,塔楼前广场,Laman hadapan
+Reading room,Reading room,阅览室,Bilik bacaan
+Fictional Reading Room,Fictional Reading Room,虚构阅览室,Bilik Bacaan Rekaan
+Campus activities,Campus activities,校园活动,Aktiviti kampus
+Check in,Check in,校园打卡,Daftar lawatan
+Study / RM 3 snack,Study / RM 3 snack,自习和 RM 3 点心,Belajar / snek RM 3
+Resume,Resume,继续,Sambung
+Clear,Clear,晴,Cerah
+Partly cloudy,Partly cloudy,局部多云,Separa berawan
+Overcast,Overcast,阴,Mendung
+Showers,Showers,阵雨,Hujan sekejap
+Downpour,Downpour,暴雨,Hujan lebat
+Thunderstorm,Thunderstorm,雷暴,Ribut petir
+After rain,After rain,雨后,Selepas hujan
+Performance,Performance,性能,Prestasi
+Balanced,Balanced,均衡,Seimbang
+High,High,高,Tinggi
+Ultra,Ultra,极致,Ultra
+Photography,Photography,摄影,Fotografi
+Walk  ·  Offline sample,Walk  ·  Offline sample,步行 · 离线样板,Berjalan · Sampel luar talian
+R return outside,R return outside,R 返回室外,R kembali ke luar
+R reading room  ·  E drive  ·  F fly,R reading room  ·  E drive  ·  F fly,R 阅览室 · E 驾车 · F 飞行,R bilik bacaan · E pandu · F terbang
+WASD walk  ·  Shift run  ·  E enter sedan  ·  F fly,WASD walk  ·  Shift run  ·  E enter sedan  ·  F fly,WASD 步行 · Shift 跑步 · E 上车 · F 飞行,WASD berjalan · Shift lari · E masuk kereta · F terbang
+WASD move  ·  Space/Ctrl climb/descend  ·  G speed  ·  F land,WASD move  ·  Space/Ctrl climb/descend  ·  G speed  ·  F land,WASD 移动 · Space/Ctrl 升降 · G 档位 · F 降落,WASD gerak · Space/Ctrl naik/turun · G kelajuan · F mendarat
+WASD steer and reverse  ·  Space brake  ·  E exit,WASD steer and reverse  ·  Space brake  ·  E exit,WASD 转向和倒车 · Space 刹车 · E 下车,WASD belok dan undur · Space brek · E keluar
+Flight %d  ·  %.0f m AGL  ·  %.0f m elevation,Flight %d  ·  %.0f m AGL  ·  %.0f m elevation,飞行 %d 档 · 离地 %.0f 米 · 海拔 %.0f 米,Terbang %d · %.0f m atas tanah · altitud %.0f m
+Driving  ·  %.0f km/h  ·  Keep left,Driving  ·  %.0f km/h  ·  Keep left,驾驶 · %.0f 公里/时 · 靠左行驶,Memandu · %.0f km/j · Kekal kiri
+Fictional reading room • R to return,Fictional reading room • R to return,虚构阅览室 · R 返回,Bilik bacaan rekaan · R untuk kembali
+Reading room access is at the Menara Razak forecourt,Reading room access is at the Menara Razak forecourt,请从 Menara Razak 塔楼前广场前往阅览室,Bilik bacaan dari laman hadapan Menara Razak
+Brake before leaving the car,Brake before leaving the car,停车后再下车,Brek sebelum keluar dari kereta
+Walk up to the parked sedan,Walk up to the parked sedan,请走近停放的轿车,Dekati kereta yang diparkir
+Forecourt check-in saved,Forecourt check-in saved,已保存广场打卡,Lawatan laman hadapan disimpan
+Check in from the Menara Razak forecourt,Check in from the Menara Razak forecourt,请到 Menara Razak 塔楼前广场打卡,Daftar di laman hadapan Menara Razak
+Study session saved · virtual RM %d,Study session saved · virtual RM %d,已保存自习记录 · 虚拟余额 RM %d,Sesi belajar disimpan · RM %d maya
+Available in the fictional reading room with RM 3,Available in the fictional reading room with RM 3,请前往虚构阅览室并准备虚拟 RM 3,Tersedia di bilik bacaan rekaan dengan RM 3
+© OpenStreetMap contributors · amber: playable landmark,© OpenStreetMap contributors · amber: playable landmark,© OpenStreetMap 贡献者 · 琥珀色可游览,© Penyumbang OpenStreetMap · kuning: lokasi boleh dilawat
+Move: left touch  ·  Look: right drag,Move: left touch  ·  Look: right drag,左侧触摸移动 · 右侧滑动看向,Kiri untuk gerak · leret kanan untuk lihat
+Hold ▲/▼ to climb or descend,Hold ▲/▼ to climb or descend,按住 ▲/▼ 升降,Tahan ▲/▼ untuk naik atau turun
+Use the stick to steer · ▲ to brake,Use the stick to steer · ▲ to brake,左侧摇杆转向 · ▲ 刹车,Guna kayu bedik untuk belok · ▲ untuk brek
+Zoom,Zoom,缩放,Zum
+Campus crowd,Campus crowd,校园人流,Orang di kampus

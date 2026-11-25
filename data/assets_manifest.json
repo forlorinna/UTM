@@ -1,0 +1,1014 @@
+{
+  "license_source": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "id": "aerial_asphalt_01",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/aerial_asphalt_01",
+      "intended_use": "Campus roads",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/aerial_asphalt_01/albedo.jpg",
+          "bytes": 635143,
+          "sha256": "28bfd71288b364f825e0feb750e487410422d80bf3c31d32da01cae3bf085b58",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_asphalt_01/aerial_asphalt_01_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/aerial_asphalt_01/normal.png",
+          "bytes": 1671509,
+          "sha256": "7fe4527733954080a5affa1a690f04b21532e092ddd5b6d89e96c9dd07ae61fe",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/aerial_asphalt_01/aerial_asphalt_01_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/aerial_asphalt_01/roughness.jpg",
+          "bytes": 312445,
+          "sha256": "19ca745417e36a1cd1114411801933b3144a351d1409d0d9caa1046b9a20c0ec",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_asphalt_01/aerial_asphalt_01_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "gray  2.0"
+        }
+      ],
+      "runtime_binding": "roads and surface parking",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "box_profile_metal_sheet",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/box_profile_metal_sheet",
+      "intended_use": "Canopy cladding",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/box_profile_metal_sheet/albedo.jpg",
+          "bytes": 346711,
+          "sha256": "c2c3643bb2e07554f805f56525ec2ffbc23117be95e324af46ac98f56fa7961f",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/box_profile_metal_sheet/box_profile_metal_sheet_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/box_profile_metal_sheet/normal.png",
+          "bytes": 5141261,
+          "sha256": "a90439e877843125c4e0493cc481cb9c7140db487859b4e372de2a5887558cea",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/box_profile_metal_sheet/box_profile_metal_sheet_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/box_profile_metal_sheet/roughness.jpg",
+          "bytes": 598232,
+          "sha256": "bdff53193514473fee81bcab6ef75dd0a4c8ff392ae9de8d603050bb2ac4a8f0",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/box_profile_metal_sheet/box_profile_metal_sheet_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "gray  2.0"
+        }
+      ],
+      "runtime_binding": "roofing and Residensi horizontal screens",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "concrete_floor_02",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/concrete_floor_02",
+      "intended_use": "Entrance plinth and canopy structure",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/concrete_floor_02/albedo.jpg",
+          "bytes": 776097,
+          "sha256": "6db84a6d87dc50508b9d134d6fbd2b7e876b8081a5f43a118a249ca18de73af5",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_02/concrete_floor_02_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/concrete_floor_02/normal.png",
+          "bytes": 6297394,
+          "sha256": "2899c1338a39369d33edc02effbfa4eb14c82b70c6efa2f13c6a0e088ee0c606",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_floor_02/concrete_floor_02_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgba 4.0"
+        },
+        {
+          "path": "assets/polyhaven/concrete_floor_02/roughness.jpg",
+          "bytes": 318550,
+          "sha256": "c7f026a611b7859903c61ec7fd4574944157223e9e7796413dd6e2a66eaeac7a",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_02/concrete_floor_02_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "gray  2.0"
+        }
+      ],
+      "runtime_binding": "material retained for exterior evaluation; no visible binding",
+      "status": "downloaded and checked; retained"
+    },
+    {
+      "id": "concrete_pavers",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/concrete_pavers",
+      "intended_use": "Paths and plaza",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/concrete_pavers/albedo.jpg",
+          "bytes": 757968,
+          "sha256": "eea1fb8b498154754f4961ce0792092ef56cadc3d210becbb0dc3bf6c96c261d",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/concrete_pavers/normal.png",
+          "bytes": 5555670,
+          "sha256": "d37c8a777529005149e02dad1182434cade24cd70161e98e5c3a66e6948a27ea",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/concrete_pavers/roughness.jpg",
+          "bytes": 324326,
+          "sha256": "27fb26837b95523b4ff8d663745466005ac6ae9797e6f5ced1192eaebf6c1469",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "gray  2.0"
+        }
+      ],
+      "runtime_binding": "footpaths and Menara Razak forecourt",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "concrete_wall_008",
+      "authors": {
+        "Dario Barresi": "Processing ",
+        "Charlotte Baglioni": "Photography"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/concrete_wall_008",
+      "intended_use": "Menara Razak facade panels",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/concrete_wall_008/albedo.jpg",
+          "bytes": 623051,
+          "sha256": "a203166d280d3cfc6a91bbc9ffdae406eb9555b4a4f658cd92619063eb17c147",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/concrete_wall_008/normal.png",
+          "bytes": 3548968,
+          "sha256": "76b85b25ec9d3c0b79aaad02690b9f2a0fe5613001d5c8063e0c2a56698e0d2f",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_wall_008/concrete_wall_008_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/concrete_wall_008/roughness.jpg",
+          "bytes": 322313,
+          "sha256": "2344fe72c4dc2fb9e4ce9b47079524ee8969f22c4af4bee85667511073fbf14a",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        }
+      ],
+      "runtime_binding": "Menara Razak, Masjid and Residensi exterior concrete",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "grass_ground",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/grass_ground",
+      "intended_use": "Landscape ground",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/grass_ground/albedo.jpg",
+          "bytes": 876584,
+          "sha256": "a79cc5ed65af0f80261b39a383b64a8c5272c5144d724deb43dbc29f0e4cd19b",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_ground/grass_ground_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/grass_ground/normal.png",
+          "bytes": 6072059,
+          "sha256": "27b4902c4cf5d70c35045f1855ff2bd2eda015037fb5c36187fa69de0077d689",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/grass_ground/grass_ground_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/grass_ground/roughness.jpg",
+          "bytes": 328190,
+          "sha256": "111341f948b7e073edf7ac6add8777e1bf10df8959400df3863243e89bbc8c08",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_ground/grass_ground_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "gray  2.0"
+        }
+      ],
+      "runtime_binding": "terrain",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "interior_tiles",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/interior_tiles",
+      "intended_use": "Fictional reading room floor",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/interior_tiles/albedo.jpg",
+          "bytes": 694562,
+          "sha256": "f267c4357e629f5ca2ab86f30da4fb0ae8c655a566cec6d81278df8d78dcca4a",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interior_tiles/interior_tiles_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/interior_tiles/normal.png",
+          "bytes": 4861040,
+          "sha256": "3b2e393509dc0229503734bc48b870dff731bec601d5e546044484dadc40a3f2",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/interior_tiles/interior_tiles_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/interior_tiles/roughness.jpg",
+          "bytes": 521038,
+          "sha256": "478b5cad03a064b9b25369223f8334d26c1bdc2cba08e3398c16234a4b2a1aaf",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interior_tiles/interior_tiles_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "gray  2.0"
+        }
+      ],
+      "runtime_binding": "fictional reading room floor",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "island_tree_02",
+      "authors": {
+        "Rob Tuytel": "scanning, processing",
+        "Rico Cilliers": "cleanup, processing"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/island_tree_02",
+      "intended_use": "Scanned tropical streetscape canopy",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/island_tree_02/island_tree_02.gltf",
+          "bytes": 8545,
+          "sha256": "d8c5d9ead41cdbef91a648f40ff60470faa19eb3a7010e59e44cb1a01250f75d",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/island_tree_02/island_tree_02_1k.gltf"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_nor_gl_1k.jpg",
+          "bytes": 1157226,
+          "sha256": "1580d5a42d02f4ede51bfb03972ab0aef3d8acafbd3692276879171007bb70ec",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_diff_1k.jpg",
+          "bytes": 738738,
+          "sha256": "8fc20397ab5d514c119d7a025868414d78e436138d3867a4b7ba12334a72ec3a",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_arm_1k.jpg",
+          "bytes": 688305,
+          "sha256": "ada61dd4fad023e699b6314b8b76590017b301719bf74ffc9e20b95893ed62b6",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_leaves_nor_gl_1k.jpg",
+          "bytes": 379443,
+          "sha256": "07ba461c0c95da4e49a42981766bdb6191d4c3c4d815796c082266dcc3cecdb8",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_leaves_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_leaves_diff_1k.jpg",
+          "bytes": 191886,
+          "sha256": "f56d762a1507754752abf164cc12acbc1e87ce87fa609ac44b98a1b0037c89d8",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_leaves_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_leaves_arm_1k.jpg",
+          "bytes": 489476,
+          "sha256": "90da3a072dbcb052715b1313b9dbc69a4aa8a09a31a4b3868411a2bb51d72037",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_leaves_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_branches_nor_gl_1k.jpg",
+          "bytes": 819101,
+          "sha256": "2d67393ba76a0f49cf965fa0c99d8c16268e71e87b1203d35539bfdb971a514e",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_branches_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_branches_diff_1k.jpg",
+          "bytes": 528304,
+          "sha256": "bee5ec22196e9e31ad0c95a5a9b4636571cc0124d5bb27a92f1e307d289cc60d",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_branches_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/textures/island_tree_02_branches_arm_1k.jpg",
+          "bytes": 484806,
+          "sha256": "9e3f82263247ce4f619692cea4c4f6fe9936ff465a86623481849062642c7d05",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/island_tree_02/island_tree_02_branches_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/island_tree_02/island_tree_02.bin",
+          "bytes": 40686576,
+          "sha256": "427d69ccc1ea12d1fb9c6af89691563b4a097f39a6f34c15be6e45ef5e5fd4ce",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/island_tree_02/island_tree_02.bin"
+        }
+      ],
+      "runtime_binding": "decimated CC0 scan instanced at campus forecourts",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "kloofendal_48d_partly_cloudy_puresky",
+      "authors": {
+        "Greg Zaal": "Original",
+        "Jarod Guest": "Sky edits"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
+      "intended_use": "Clear-sky lighting",
+      "resolution": "2K",
+      "files": [
+        {
+          "path": "assets/polyhaven/kloofendal_48d_partly_cloudy_puresky/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+          "bytes": 5451493,
+          "sha256": "5244534e9cf5b606f2ff513aa00ddb161b0a4826ffd88a0d3bd03ac29247d198",
+          "download": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+          "width": 2048,
+          "height": 1024,
+          "channels": "RGBE"
+        }
+      ],
+      "runtime_binding": "daytime sky and reflection",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "metal_trash_can",
+      "authors": {
+        "GurJas Studios": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/metal_trash_can",
+      "intended_use": "Plaza furniture",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/metal_trash_can/metal_trash_can.gltf",
+          "bytes": 15481,
+          "sha256": "ccdc55ecfe43db2174c9257891e92551882a874564bb9a7908cafc5268b46c0c",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/metal_trash_can/metal_trash_can_1k.gltf"
+        },
+        {
+          "path": "assets/polyhaven/metal_trash_can/textures/metal_trash_can_diff_1k.jpg",
+          "bytes": 551939,
+          "sha256": "920c895a31b1cd2c000123c0592c70c33d46562752987da98070e7e0eebb662f",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_trash_can/metal_trash_can_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/metal_trash_can/textures/metal_trash_can_rust_diff_1k.jpg",
+          "bytes": 768161,
+          "sha256": "51c44248305b111d978f7e0cbfe4a71ab7f49549968ce37c54b635d74c2cfba1",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_trash_can/metal_trash_can_rust_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/metal_trash_can/textures/metal_trash_can_arm_1k.jpg",
+          "bytes": 731776,
+          "sha256": "b23dcdb2ed40c1c6cfbd2d2779c6f075025b7269bfbbed2a70c6bdb7167e47fb",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_trash_can/metal_trash_can_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/metal_trash_can/textures/metal_trash_can_rust_nor_gl_1k.jpg",
+          "bytes": 1085844,
+          "sha256": "a5497588e00e5e56db72e701457fc8a46d3a1fa7d9dd7bf9d79e02cada09e84b",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_trash_can/metal_trash_can_rust_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/metal_trash_can/textures/metal_trash_can_nor_gl_1k.jpg",
+          "bytes": 842945,
+          "sha256": "b977f17aa9d4718ffc91a62868b7171b4479578b8cffd1d32001d92552af81a4",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_trash_can/metal_trash_can_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/metal_trash_can/metal_trash_can.bin",
+          "bytes": 378288,
+          "sha256": "a9b9f526b655bef865933335f2cfc8c8f0bd1a35fda05b290a93e3061f2b6c8a",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/metal_trash_can/metal_trash_can.bin"
+        },
+        {
+          "path": "assets/polyhaven/metal_trash_can/textures/metal_trash_can_rust_arm_1k.jpg",
+          "bytes": 620549,
+          "sha256": "31a6269e98a3a8b2a2d6db8f58724e0151d5312b5137e6d59b5a2ba873989159",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_trash_can/metal_trash_can_rust_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        }
+      ],
+      "runtime_binding": "Menara Razak forecourt",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "old_wood_floor",
+      "authors": {
+        "Guillaume Monsergent": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/old_wood_floor",
+      "intended_use": "Fictional reading room furniture",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/old_wood_floor/albedo.jpg",
+          "bytes": 755937,
+          "sha256": "e6952149cd1bb02e485a183f526e9dbe8d90d2a22bfac564cc3874cfb8eddd03",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/old_wood_floor/normal.png",
+          "bytes": 5052603,
+          "sha256": "2e77dee50a8060e0b73c1beaa79b00094941e29101976289589997cd7c2f4dd5",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/old_wood_floor/old_wood_floor_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/old_wood_floor/roughness.jpg",
+          "bytes": 519577,
+          "sha256": "ab7c16727ac2672a029c2441796a6b3524b90b3ddbb5e5085ed32dd961a6f1ca",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        }
+      ],
+      "runtime_binding": "fictional reading room furniture",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "overcast_soil_puresky",
+      "authors": {
+        "Jarod Guest": "Sky Edits",
+        "Sergej Majboroda": "Original"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/overcast_soil_puresky",
+      "intended_use": "Overcast lighting",
+      "resolution": "2K",
+      "files": [
+        {
+          "path": "assets/polyhaven/overcast_soil_puresky/overcast_soil_puresky_2k.hdr",
+          "bytes": 4568000,
+          "sha256": "5414e1ac0c35e451d28595b2a2cba05e2ca301fdeb755b0a469408443093dafc",
+          "download": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/overcast_soil_puresky_2k.hdr",
+          "width": 2048,
+          "height": 1024,
+          "channels": "RGBE"
+        }
+      ],
+      "runtime_binding": "overcast and rain sky and reflection",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "painted_concrete",
+      "authors": {
+        "Dario Barresi": "Processing",
+        "Dimitrios Savva": "Photography"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/painted_concrete",
+      "intended_use": "Painted concrete and entrance",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/painted_concrete/albedo.jpg",
+          "bytes": 995059,
+          "sha256": "eac7181921fdafb99aa46be75b664b32387c203e11e11b69ef352ad2aaae1203",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_concrete/painted_concrete_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/painted_concrete/normal.png",
+          "bytes": 5251895,
+          "sha256": "29ffbb574449853c59c64955b748a1f7508b5531985ebf4908f140821df3b4bb",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/painted_concrete/painted_concrete_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/painted_concrete/roughness.jpg",
+          "bytes": 420750,
+          "sha256": "6b05b85c31f8ab4fe8ddab10968c2b99b1a699ec2e53695a9436347bf982d676",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_concrete/painted_concrete_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        }
+      ],
+      "runtime_binding": "MJIIT, Masjid, Residensi and reading room",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "painted_wooden_bench",
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/painted_wooden_bench",
+      "intended_use": "Plaza and reading room seating",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/painted_wooden_bench/painted_wooden_bench.gltf",
+          "bytes": 2835,
+          "sha256": "2289ab82f3fe3045bf18f7b9541743d2c65b9f071cb34bbe424d2bc998f3e507",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/painted_wooden_bench/painted_wooden_bench_1k.gltf"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_bench/textures/painted_wooden_bench_diff_1k.jpg",
+          "bytes": 545216,
+          "sha256": "9bc533313091ee71eaca5fa6334b71d27935d9d75311f64df6a53c28a67c435c",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/painted_wooden_bench/painted_wooden_bench_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_bench/textures/painted_wooden_bench_nor_gl_1k.jpg",
+          "bytes": 830104,
+          "sha256": "a0f53740d77fc61aac01de0b7e1ae6109445d1756839f739ae31fdf10c9911f2",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/painted_wooden_bench/painted_wooden_bench_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_bench/textures/painted_wooden_bench_arm_1k.jpg",
+          "bytes": 586040,
+          "sha256": "878785565eeff706b8f1e4db7e3d794a544e9cf0e56cee424d9a271ab4ead47e",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/painted_wooden_bench/painted_wooden_bench_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_bench/painted_wooden_bench.bin",
+          "bytes": 25444,
+          "sha256": "5799bcb20924105cccd6424de8cdb8e67eb57fddc19c395befeac634a7b2e013",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/painted_wooden_bench/painted_wooden_bench.bin"
+        }
+      ],
+      "runtime_binding": "plaza and reading room",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "palm_tree_bark",
+      "authors": {
+        "Dimitrios Savva": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/palm_tree_bark",
+      "intended_use": "Palm reference material",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/palm_tree_bark/albedo.jpg",
+          "bytes": 1974940,
+          "sha256": "38da1d987ea88af120cedd66ad7d2f26ea3351d23c061e7d22bebc37ed22d9ef",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/palm_tree_bark/palm_tree_bark_diff_1k.jpg",
+          "width": 1024,
+          "height": 2048,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/palm_tree_bark/normal.png",
+          "bytes": 10976019,
+          "sha256": "84557ad0379ef28e1d7606cbd8fae77767bebddf610251c70fcf62d2e7cc27e3",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/palm_tree_bark/palm_tree_bark_nor_gl_1k.png",
+          "width": 1024,
+          "height": 2048,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/palm_tree_bark/roughness.jpg",
+          "bytes": 1350564,
+          "sha256": "60e84bf7bdd366509d9176fdce72abfdf50da0975bf1d01b5469d20468e8232a",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/palm_tree_bark/palm_tree_bark_rough_1k.jpg",
+          "width": 1024,
+          "height": 2048,
+          "channels": "srgb  3.0"
+        }
+      ],
+      "runtime_binding": "retained for future palm asset; no visible binding",
+      "status": "downloaded and checked; retained"
+    },
+    {
+      "id": "planter_box_01",
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/planter_box_01",
+      "intended_use": "Entrance furniture",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/planter_box_01/planter_box_01.gltf",
+          "bytes": 2787,
+          "sha256": "15c7ff7396d872e5cad6743c796ff0f42e1f3f831fd334a26aa1fdbd11834a1f",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/planter_box_01/planter_box_01_1k.gltf"
+        },
+        {
+          "path": "assets/polyhaven/planter_box_01/textures/planter_box_01_nor_gl_1k.jpg",
+          "bytes": 707323,
+          "sha256": "7d2ad01fdfc8ea9e39af0ddc1db710380afad859dc3848302ff72d21a6e21a27",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_box_01/planter_box_01_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/planter_box_01/textures/planter_box_01_arm_1k.jpg",
+          "bytes": 745610,
+          "sha256": "b80b08f88166360af32a076082daaed820f0d364a5bef0acea651485017ccbd6",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_box_01/planter_box_01_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/planter_box_01/planter_box_01.bin",
+          "bytes": 250580,
+          "sha256": "cc97bc9ee05a90c78e27ca575a83eba86955e863dea8a12826f6ff02c2c11db3",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/planter_box_01/planter_box_01.bin"
+        },
+        {
+          "path": "assets/polyhaven/planter_box_01/textures/planter_box_01_diff_1k.jpg",
+          "bytes": 633117,
+          "sha256": "5ad77068bf07ca371e18322c04641754a7758f4479e2835b93f671b4a5143bee",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_box_01/planter_box_01_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        }
+      ],
+      "runtime_binding": "Menara Razak forecourt",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "red_laterite_soil_stones",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/red_laterite_soil_stones",
+      "intended_use": "Planted beds",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/red_laterite_soil_stones/albedo.jpg",
+          "bytes": 906764,
+          "sha256": "949cd648409b30e2267d89066965605d22dba4ce73d601673e155046c41e1219",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/red_laterite_soil_stones/normal.png",
+          "bytes": 7112175,
+          "sha256": "7cc7f835a3242574e085bfd948234d025fe81714cfda110d57456a914bae66a9",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/red_laterite_soil_stones/red_laterite_soil_stones_nor_gl_1k.png",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgba 4.0"
+        },
+        {
+          "path": "assets/polyhaven/red_laterite_soil_stones/roughness.jpg",
+          "bytes": 722823,
+          "sha256": "caa50edfe98d3104bae1d03416f37f34ec90f537cf0d81d1cbe3812b379190f3",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_rough_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "gray  2.0"
+        }
+      ],
+      "runtime_binding": "Menara Razak planted bed",
+      "status": "downloaded and bound in Godot"
+    },
+    {
+      "id": "street_lamp_01",
+      "authors": {
+        "Josh Dean": "All"
+      },
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/a/street_lamp_01",
+      "intended_use": "Plaza lighting fixtures",
+      "resolution": "1K",
+      "files": [
+        {
+          "path": "assets/polyhaven/street_lamp_01/street_lamp_01.gltf",
+          "bytes": 6419,
+          "sha256": "5d0358ede168b5e04547780b99d8e6d651cbe644e468e67cb505019047cbd5c8",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/street_lamp_01/street_lamp_01_1k.gltf"
+        },
+        {
+          "path": "assets/polyhaven/street_lamp_01/textures/street_lamp_01_arm_1k.jpg",
+          "bytes": 664324,
+          "sha256": "4b5487a6c7ee300c3cf5449629e01c35409e5c7ac1695edb9fe69d4821853c7c",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/street_lamp_01/street_lamp_01_arm_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/street_lamp_01/textures/street_lamp_01_diff_1k.jpg",
+          "bytes": 307889,
+          "sha256": "3e9d3471b33eb1f8075ed741c2b1932103598626d057ca12ef38005ea5fcb165",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/street_lamp_01/street_lamp_01_diff_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/street_lamp_01/textures/street_lamp_01_nor_gl_1k.jpg",
+          "bytes": 438623,
+          "sha256": "172af0fd7ed4999e9f520b9f56e1f357a6dba87adbd7b8aa87e0a0b95840c63d",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/street_lamp_01/street_lamp_01_nor_gl_1k.jpg",
+          "width": 1024,
+          "height": 1024,
+          "channels": "srgb  3.0"
+        },
+        {
+          "path": "assets/polyhaven/street_lamp_01/street_lamp_01.bin",
+          "bytes": 748908,
+          "sha256": "c283db9b6d95835d9e8fc1692829acadcb21a0623b2daaa7231cec1440488401",
+          "download": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/street_lamp_01/street_lamp_01.bin"
+        }
+      ],
+      "runtime_binding": "plaza and service road street lamps",
+      "status": "downloaded and bound in Godot"
+    }
+  ],
+  "failures": [],
+  "other_assets": [
+    {
+      "id": "sedan",
+      "author": "Innerscene",
+      "license": "CC0-1.0",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/white-four-door-sedan-1f271353",
+      "download": "https://www.innerscene.com/api/library/white-four-door-sedan-1f271353/download",
+      "runtime_binding": "drivable sedan and rotating wheel pivots",
+      "files": [
+        {
+          "path": "art/Innerscene_White_Sedan_original.glb",
+          "bytes": 5063760,
+          "sha256": "177816bdd8a96f12b2356a806684f241c0c9121e905ad04fc5d3834c9b125a74"
+        },
+        {
+          "path": "assets/vehicles/sedan.glb",
+          "bytes": 5075944,
+          "sha256": "1479e21f71713d74e358542cd79b90bfb6791550c809ed3eea3d53a9bc381ece"
+        }
+      ]
+    },
+    {
+      "id": "sam_walk",
+      "author": "Innerscene; based on MakeHuman/MPFB CC0 data",
+      "license": "CC0-1.0",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/relaxed-walk-sam-3d-person-animated-732f1206",
+      "download": "https://www.innerscene.com/api/library/relaxed-walk-sam-3d-person-animated-732f1206/download",
+      "runtime_binding": "third-person player and visitors",
+      "files": [
+        {
+          "path": "art/characters/Innerscene_Sam_Walk.glb",
+          "bytes": 21021136,
+          "sha256": "fbf6558ff408b6c5d12c82a5aaa506e07ec796f963a9ac1d4b9c88a39b0fd429"
+        },
+        {
+          "path": "assets/people/sam.glb",
+          "bytes": 21105536,
+          "sha256": "6eb02e9f10cf710de4835d35f4fb0f3163ded9bbd380c43caa0d40f7380b1727"
+        }
+      ]
+    },
+    {
+      "id": "sam_run",
+      "author": "Innerscene; based on MakeHuman/MPFB CC0 data",
+      "license": "CC0-1.0",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/run-sam-3d-person-animated-fa008c06",
+      "download": "https://www.innerscene.com/api/library/run-sam-3d-person-animated-fa008c06/download",
+      "runtime_binding": "run animation merged into playable character",
+      "files": [
+        {
+          "path": "art/characters/Innerscene_Sam_Run.glb",
+          "bytes": 21006276,
+          "sha256": "fe1954e5714e2c4888db49e05c0fb23335757e9ff21b2c7ac4564bb55aff7173"
+        },
+        {
+          "path": "assets/people/sam.glb",
+          "bytes": 21105536,
+          "sha256": "6eb02e9f10cf710de4835d35f4fb0f3163ded9bbd380c43caa0d40f7380b1727"
+        }
+      ]
+    },
+    {
+      "id": "maya_phone",
+      "author": "Innerscene; based on MakeHuman/MPFB CC0 data",
+      "license": "CC0-1.0",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/walk-carrying-phone-maya-3d-person-animated-06ba936a",
+      "download": "https://www.innerscene.com/api/library/walk-carrying-phone-maya-3d-person-animated-06ba936a/download",
+      "runtime_binding": "visitors carrying a phone",
+      "files": [
+        {
+          "path": "assets/people/maya.glb",
+          "bytes": 20538024,
+          "sha256": "af2e1a663b4303fc961cf54d91baf4b689e9d36303aeecfd3bf552f2232974c5"
+        }
+      ]
+    },
+    {
+      "id": "rain",
+      "author": "Kresiek The Furry",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/amb-rain-loop-1",
+      "download": "https://opengameart.org/sites/default/files/amb_rain_loop_1.ogg",
+      "runtime_binding": "looped wet-weather ambience",
+      "files": [
+        {
+          "path": "assets/audio/rain.ogg",
+          "bytes": 1593741,
+          "sha256": "ae578791d46218d180a0e3aebefb5d621dbdd3f1627899c25210379f57d480b0"
+        }
+      ]
+    },
+    {
+      "id": "birds",
+      "author": "Isaiah658",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/ambient-bird-sounds",
+      "download": "https://opengameart.org/sites/default/files/birds-isaiah658.ogg",
+      "runtime_binding": "outdoor daytime ambience",
+      "files": [
+        {
+          "path": "assets/audio/birds.ogg",
+          "bytes": 544669,
+          "sha256": "359e4e3f9da9d75aac64cede511c7e3ef8b461f9d9f8c230f8f80e44c4b3e35f"
+        }
+      ]
+    },
+    {
+      "id": "noto_sc_subset",
+      "author": "Google, Adobe and Noto contributors",
+      "license": "OFL-1.1",
+      "source": "https://github.com/notofonts/noto-cjk",
+      "runtime_binding": "Chinese, English and Malay UI font",
+      "files": [
+        {
+          "path": "assets/i18n/NotoSansSC-subset.otf",
+          "bytes": 139716,
+          "sha256": "3e4036b5e913de8504a80672f7616dc661f3b6872c8790e2cfb506a37de19120"
+        }
+      ]
+    }
+  ],
+  "derivatives": [
+    {
+      "source": "island_tree_02",
+      "license": "CC0-1.0",
+      "modification": "Blender decimation by material",
+      "files": [
+        {
+          "path": "assets/landscape/island_tree_realtime.glb",
+          "bytes": 9206672,
+          "sha256": "a609bab6d9b00a588c7720db4b1942ffd5fdb80f96ffca833802e69901c8ae90"
+        }
+      ]
+    },
+    {
+      "source": "painted_concrete",
+      "license": "CC0-1.0",
+      "modification": "neutral albedo for colored paint matching",
+      "files": [
+        {
+          "path": "assets/materials/paint_neutral.jpg",
+          "bytes": 193396,
+          "sha256": "a66557458ddc40d2fb66a5837c96d07b15fe8f60ac0b949ccdc79924adcf5a73"
+        }
+      ]
+    },
+    {
+      "source": "box_profile_metal_sheet",
+      "license": "CC0-1.0",
+      "modification": "desaturated albedo for silver metal",
+      "files": [
+        {
+          "path": "assets/materials/roof_silver.jpg",
+          "bytes": 110551,
+          "sha256": "a3948e91cf92683f1ef77699b7f4ef17147d91698915007c12625078ddea7332"
+        }
+      ]
+    }
+  ]
+}
