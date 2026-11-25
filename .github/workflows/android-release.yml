@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Check out the game source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -28,12 +28,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sdk_root="${ANDROID_HOME:?GitHub runner Android SDK is unavailable}"
+          sdk_root="$RUNNER_TEMP/utmkl-android-sdk"
           java_home="${JAVA_HOME_21_X64:?GitHub runner JDK 21 is unavailable}"
           export JAVA_HOME="$java_home"
           export PATH="$JAVA_HOME/bin:$PATH"
           command -v rg >/dev/null || { sudo apt-get update && sudo apt-get install -y ripgrep; }
-          sdkmanager --sdk_root="$sdk_root" 'platforms;android-36' "build-tools;$ANDROID_BUILD_TOOLS_VERSION"
 
           tools_dir="$RUNNER_TEMP/utmkl-tools"
           config_dir="$RUNNER_TEMP/utmkl-config"
@@ -41,7 +40,27 @@ jobs:
           engine_name="Godot_v$GODOT_VERSION-stable_linux.x86_64"
           template_dir="$data_dir/godot/export_templates/$GODOT_VERSION.stable"
           release_url="https://github.com/godotengine/godot-builds/releases/download/$GODOT_VERSION-stable"
-          mkdir -p "$tools_dir" "$config_dir/godot" "$template_dir"
+          mkdir -p "$tools_dir" "$config_dir/godot" "$template_dir" "$sdk_root/build-tools" "$sdk_root/platforms"
+          google_sdk_url=https://dl.google.com/android/repository
+          curl --fail --silent --show-error --location --retry 4 \
+            --output "$tools_dir/build-tools.zip" "$google_sdk_url/build-tools_r36_linux.zip"
+          curl --fail --silent --show-error --location --retry 4 \
+            --output "$tools_dir/platform.zip" "$google_sdk_url/platform-36_r02.zip"
+          curl --fail --silent --show-error --location --retry 4 \
+            --output "$tools_dir/platform-tools.zip" "$google_sdk_url/platform-tools_r37.0.3-linux.zip"
+          (
+            cd "$tools_dir"
+            sha256sum -c <<'CHECKSUMS'
+          5d9ac77fb6ff43d9da518a337b4fcf8f9097113df531d99ccefe80ef7ce8250b  build-tools.zip
+          37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e  platform.zip
+          214548146cadb2ca3508143d8a1d4be4c59de5bb837253e3ede89ed74cf450d1  platform-tools.zip
+          CHECKSUMS
+          )
+          unzip -q "$tools_dir/build-tools.zip" -d "$sdk_root/build-tools"
+          mv "$sdk_root/build-tools/android-16" "$sdk_root/build-tools/$ANDROID_BUILD_TOOLS_VERSION"
+          unzip -q "$tools_dir/platform.zip" -d "$sdk_root/platforms"
+          unzip -q "$tools_dir/platform-tools.zip" -d "$sdk_root"
+          rm -- "$tools_dir/build-tools.zip" "$tools_dir/platform.zip" "$tools_dir/platform-tools.zip"
           curl --fail --silent --show-error --location --retry 4 \
             --output "$tools_dir/godot.zip" "$release_url/$engine_name.zip"
           unzip -j "$tools_dir/godot.zip" "$engine_name" -d "$tools_dir"
