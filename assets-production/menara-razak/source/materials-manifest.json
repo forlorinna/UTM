@@ -1,0 +1,128 @@
+[
+  {
+    "asset": "metal_plate_02",
+    "license": "CC0-1.0",
+    "channel": "nor_gl",
+    "file": "materials/aluminium_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_02/metal_plate_02_nor_gl_4k.jpg",
+    "sha256": "7b5ddff95f81da6575e5f20694b0a4330a158ef479ed5c489492db805987e8e1",
+    "bytes": 1723616
+  },
+  {
+    "asset": "metal_plate_02",
+    "license": "CC0-1.0",
+    "channel": "Rough",
+    "file": "materials/aluminium_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_02/metal_plate_02_rough_4k.jpg",
+    "sha256": "fc6aa00f0e506de20735a4ff7d97c27ee90181139c13225a804a6d231ef050b3",
+    "bytes": 15459837
+  },
+  {
+    "asset": "metal_plate_02",
+    "license": "CC0-1.0",
+    "channel": "Metal",
+    "file": "materials/aluminium_Metal.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/metal_plate_02/metal_plate_02_metal_4k.jpg",
+    "sha256": "ad2aa9ff2c409bbce7384a4baa0a42e2f198b38afccc341ef96a1c0b9055b830",
+    "bytes": 7541784
+  },
+  {
+    "asset": "concrete_floor_02",
+    "license": "CC0-1.0",
+    "channel": "Diffuse",
+    "file": "materials/granite_Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_floor_02/concrete_floor_02_diff_4k.jpg",
+    "sha256": "a583f2b42e921e9e85be823cc5fd59e32ab4a94a7866e196287e6651d12187d5",
+    "bytes": 12425225
+  },
+  {
+    "asset": "concrete_floor_02",
+    "license": "CC0-1.0",
+    "channel": "nor_gl",
+    "file": "materials/granite_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_floor_02/concrete_floor_02_nor_gl_4k.jpg",
+    "sha256": "44f00d992ff7104d95a170481145d6aeb50ee7f581066077e2871a743797486e",
+    "bytes": 3668559
+  },
+  {
+    "asset": "concrete_floor_02",
+    "license": "CC0-1.0",
+    "channel": "Rough",
+    "file": "materials/granite_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_floor_02/concrete_floor_02_rough_4k.jpg",
+    "sha256": "23fa5c56214a85996cfebaa7892c9a4760567c95cef24dd21cc86d0c13aadd92",
+    "bytes": 4998341
+  },
+  {
+    "asset": "brick_floor_003",
+    "license": "CC0-1.0",
+    "channel": "Diffuse",
+    "file": "materials/brick_Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brick_floor_003/brick_floor_003_diffuse_4k.jpg",
+    "sha256": "adda354d0a9b9273472aeca17e343be2a52487cd9900c8a5ee584ad6cb997567",
+    "bytes": 2940999
+  },
+  {
+    "asset": "brick_floor_003",
+    "license": "CC0-1.0",
+    "channel": "nor_gl",
+    "file": "materials/brick_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brick_floor_003/brick_floor_003_nor_gl_4k.jpg",
+    "sha256": "62b06eea9aeb935dc1fd62f902ccf6a389bdb98bd2d28c1e23777acb77969fb3",
+    "bytes": 3961867
+  },
+  {
+    "asset": "brick_floor_003",
+    "license": "CC0-1.0",
+    "channel": "Rough",
+    "file": "materials/brick_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brick_floor_003/brick_floor_003_rough_4k.jpg",
+    "sha256": "ede90db585f4862057752c777fe1dcc80be09b1389250ad61eb74beb194cc68a",
+    "bytes": 2416833
+  },
+  {
+    "asset": "urban_street_04",
+    "license": "CC0-1.0",
+    "channel": "hdri",
+    "file": "materials/sky_hdri.hdr",
+    "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/urban_street_04_2k.hdr",
+    "sha256": "0eff0c4cc04ed0d993456d61e8e6be4ae7793397de50a4ab17e066e4655e2efa",
+    "bytes": 6861812
+  },
+  {
+    "asset": "concrete_wall_007",
+    "license": "CC0-1.0",
+    "channel": "Diffuse",
+    "file": "materials/clean_Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_wall_007/concrete_wall_007_diff_4k.jpg",
+    "sha256": "b6723cf2060520ac8341df5ae6d9cfa3f6714956749f86255c7d1fe695ecaa55",
+    "bytes": 13202982
+  },
+  {
+    "asset": "concrete_wall_007",
+    "license": "CC0-1.0",
+    "channel": "nor_gl",
+    "file": "materials/clean_nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_wall_007/concrete_wall_007_nor_gl_4k.jpg",
+    "sha256": "468198ef12971796d4e8d458423c8d94ceec4a46fec51705785465d304efc3fe",
+    "bytes": 9476659
+  },
+  {
+    "asset": "concrete_wall_007",
+    "license": "CC0-1.0",
+    "channel": "Rough",
+    "file": "materials/clean_Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_wall_007/concrete_wall_007_rough_4k.jpg",
+    "sha256": "263148ddcb4280425b6933f82479844280691c3dacefe4e38c8c22a6cabefeff",
+    "bytes": 9956697
+  },
+  {
+    "asset": "concrete_wall_007",
+    "license": "CC0-1.0",
+    "channel": "Neutral",
+    "file": "materials/clean_Neutral.jpg",
+    "source": "Derived from clean_Diffuse.jpg by grayscale and restrained contrast",
+    "sha256": "4251b1cd5d1910fdcda302f1bae36738859d2b3c6701eca792036b054914265e",
+    "bytes": 1922727
+  }
+]

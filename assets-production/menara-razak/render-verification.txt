@@ -1,0 +1,12 @@
+RENDER 01_SW_Curtain_Wall 1920x1080 @ 100% | Cycles CPU
+Saved: 'renders/01_SW_Curtain_Wall.png'
+Time: 03:18.94 (Saving: 00:00.39)
+RENDER 02_NE_Stone_and_Crown 1920x1080 @ 100% | Cycles CPU
+Saved: 'renders/02_NE_Stone_and_Crown.png'
+Time: 02:00.48 (Saving: 00:00.20)
+RENDER 03_Entry_Canopy 1920x1080 @ 100% | Cycles CPU
+Saved: 'renders/03_Entry_Canopy.png'
+Time: 05:08.04 (Saving: 00:00.24)
+
+Blender 4.5.3 LTS. All three PNG files manually inspected and decoded as 1920x1080.
+GLB validator: 0 errors, 0 warnings. GLB independently reimported in Blender.
