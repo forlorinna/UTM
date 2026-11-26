@@ -1,0 +1,9 @@
+game/node_modules/
+game/dist/
+game/qa/*.png
+game/qa/*.jpg
+android/sdk/
+android/product/
+android/*.p12
+android/*.jks
+game/utmkl-core.glb

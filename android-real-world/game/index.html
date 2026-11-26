@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#102019">
+<title>UTMKL REAL WORLD</title>
+<link rel="icon" href="icon.png">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<main id="viewport" aria-label="3D campus"></main>
+<div id="scrim"></div>
+<header id="brand"><span class="monogram">U<span></span></span><div><strong>UTMKL <i>REAL WORLD</i></strong><small>KUALA LUMPUR · MALAYSIA</small></div></header>
+<div id="status"><i></i><span id="modeName">AERIAL VIEW</span><span class="divider"></span><span id="clock">16:40 MYT</span></div>
+<div id="tools">
+<button id="mapButton" aria-label="Campus map" title="Campus map"><svg viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></svg></button>
+<button id="photoButton" aria-label="Photography" title="Photography"><svg viewBox="0 0 24 24"><path d="M4 6h4l2-2h4l2 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/><circle cx="12" cy="13" r="4"/></svg></button>
+<button id="settingsButton" aria-label="Settings" title="Settings"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="11" cy="17" r="2"/></svg></button>
+</div>
+<div id="miniFrame" role="button" tabindex="0" aria-label="Open campus map"><canvas id="mini" width="384" height="252"></canvas><span id="north">N</span><span id="coordinates">UTM KUALA LUMPUR</span></div>
+<div id="intro">
+  <div class="intro-kicker"><b></b> CAMPUS EXPLORER</div>
+  <h1>UTM<br><em>Kuala Lumpur.</em></h1>
+  <div class="intro-action"><button id="begin" class="primary">Explore campus <svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button><button id="flyIntro" class="glass">Fly over</button></div>
+</div>
+<div id="walkHud" hidden>
+  <div class="joystick" id="joystick" aria-label="Move"><div id="stick"></div></div>
+  <div class="actions"><button id="view" aria-label="Switch view">3RD</button><button id="fly" aria-label="Fly drone">FLY</button><button id="sprint" aria-label="Sprint">RUN</button><button id="jump" aria-label="Jump"><svg viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 5v14"/></svg></button></div>
+</div>
+<div id="flightHud" hidden><div class="actions"><button id="down" aria-label="Descend">−</button><button id="up" aria-label="Ascend">+</button><button id="land" aria-label="Walk">WALK</button></div></div>
+<div id="location"><strong id="locationName">UTM Kuala Lumpur</strong><small id="locationHint">Explore the landmarks</small></div>
+<div id="credits">© OPENSTREETMAP CONTRIBUTORS</div>
+<div id="toast" role="status" hidden></div>
+<div id="grid" hidden></div>
+<div id="flash"></div>
+<section class="panel" id="mapPanel" hidden>
+  <div class="panelHead"><div><small>UTM KUALA LUMPUR</small><h2>Campus map</h2></div><button class="close" aria-label="Close">×</button></div>
+  <canvas id="largeMap" width="560" height="320" aria-label="Mapped roads and buildings"></canvas>
+  <div id="places"></div>
+</section>
+<section class="panel" id="settingsPanel" hidden>
+  <div class="panelHead"><div><small>DISPLAY AND CONTROLS</small><h2>Settings</h2></div><button class="close" aria-label="Close">×</button></div>
+  <label>Graphics<select id="quality"><option>Performance</option><option selected>Balanced</option><option>High</option><option>Cinematic</option></select></label>
+  <label>Atmosphere<select id="weather"><option value="day">Clear</option><option value="overcast">Overcast</option><option value="gold" selected>Golden hour</option><option value="rain">Rain</option><option value="night">Night</option></select></label>
+  <label>Performance HUD<input id="stats" type="checkbox"></label>
+  <p>Touch left to move. Drag the scene to look. On desktop, use WASD, Shift and Space.</p>
+  <button id="sourcesButton" class="panelButton">Sources and reconstruction notes <b>↗</b></button>
+</section>
+<section class="panel" id="photoPanel" hidden>
+  <div class="panelHead"><div><small>CAMERA</small><h2>Photo mode</h2></div><button class="close" aria-label="Close">×</button></div>
+  <label>Lens <span id="lensValue">55°</span><input type="range" id="lens" min="23" max="85" value="55"></label>
+  <label>Exposure <span id="expValue">0.0 EV</span><input type="range" id="exposure" min="-1.5" max="1.5" step=".1" value="0"></label>
+  <label>Framing grid<input id="gridToggle" type="checkbox" checked></label>
+  <label>Capture size<select id="resolution"><option value="1920">1080p</option><option value="2560">1440p</option><option value="3840">4K</option></select></label>
+  <button id="capture" class="primary photoCapture">Save photo</button>
+  <button id="offlineStill" class="panelButton">View Cycles render <b>↗</b></button>
+</section>
+<section class="panel" id="stillPanel" hidden>
+  <div class="panelHead"><div><small>BLENDER CYCLES · 1080P</small><h2>Campus overlook</h2></div><button class="close" aria-label="Close">×</button></div>
+  <img id="cyclesImage" alt="Offline ray-traced mesh view of the campus" width="1920" height="1080">
+  <p>Rendered offline from the campus mesh at 40 samples. This is a fixed camera view.</p>
+</section>
+<section class="panel" id="sourcePanel" hidden>
+  <div class="panelHead"><div><small>BUILD 0.1</small><h2>About this campus</h2></div><button class="close" aria-label="Close">×</button></div>
+  <p>Buildings, roads, paths and the campus boundary are based on OpenStreetMap. The four landmark models were adapted from the UTMKL Campus Life project. Several heights and exterior details are approximate. The ground uses public elevation tiles and smooths local terrain.</p>
+  <p>The Gaussian gallery displays two independent scans in Spark. Houseplant was captured by Marcel Padilla. Shaded park walk was reconstructed by Necessity Robotics in India. This build uses a 20 m crop.</p>
+  <p>© OpenStreetMap contributors (ODbL) · Mapzen Terrain Tiles / NASA SRTM · Poly Haven textures, sky and tree models and Innerscene’s Sam (CC0) · Marcel Padilla and Necessity Robotics (CC BY 4.0).</p>
+</section>
+<section class="panel" id="placePanel" hidden>
+  <div class="panelHead"><div><small>UTM KUALA LUMPUR</small><h2 id="placeTitle"></h2></div><button class="close" aria-label="Close">×</button></div>
+  <p id="placeDescription"></p><button id="visit" class="primary">Visit location</button>
+</section>
+<div id="scanMark" hidden><b>GAUSSIAN GALLERY</b><span id="scanText">Loading exhibit…</span><button id="exhibitSwitch" class="glass" hidden>Outdoor scan</button><label id="scanFileButton" class="fileLabel" hidden>Open local splat<input id="scanFile" type="file" accept=".ply,.splat,.spz,.ksplat,application/octet-stream"></label><button id="exitScan" class="glass">Return to campus</button></div>
+<div id="diagnostic" hidden></div>
+<div id="loader"><div class="loadingMark">UTM<span>KL</span></div><p>Loading Kuala Lumpur</p><div class="loadingBar"></div><small id="loadError"></small></div>
+</body>
+</html>

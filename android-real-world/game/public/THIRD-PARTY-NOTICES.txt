@@ -1,0 +1,87 @@
+UTMKL REAL WORLD — data and asset notices
+
+CAMPUS MAP
+© OpenStreetMap contributors
+Source: https://www.openstreetmap.org/copyright
+Extract: https://api.openstreetmap.org/api/0.6/map?bbox=101.715,3.165,101.729,3.180
+License: Open Database License (ODbL) 1.0 — https://opendatacommons.org/licenses/odbl/1-0/
+Processed map geometry is distributed in campus.json under ODbL. Road widths, unmeasured heights and visual models may be estimates.
+Terrain elevations: Mapzen/AWS Terrain Tiles, derived in this area from public NASA SRTM.
+https://registry.opendata.aws/terrain-tiles/
+
+CAMPUS LANDMARK MODELS
+Menara Razak, MJIIT, Masjid UTMKL and Residensi UTMKL are adapted from UTMKL Campus Life by forlorinna.
+https://github.com/forlorinna/UTM/tree/utmkl-campus-life/assets/architecture
+Original reference-built model geometry is retained. The APK aligns the model positions to the local GIS grid.
+Menara Razak Wikimedia photo and MJIIT official campus photography were consulted for comparison. Those photos are not distributed.
+
+SURFACE MATERIALS, LIGHTING AND TREE IMPOSTORS
+Poly Haven, Creative Commons Zero 1.0 — https://polyhaven.com/license
+https://polyhaven.com/a/asphalt_track
+https://polyhaven.com/a/concrete_wall_007
+https://polyhaven.com/a/grass_path_2
+https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky
+https://polyhaven.com/a/tree_small_02
+https://polyhaven.com/a/island_tree_02
+Tree images were rendered in Blender Cycles and cropped to create runtime impostors. The campus rendering uses PBR textures and an HDR environment.
+
+ANIMATED CHARACTER
+Sam by Innerscene, based on MakeHuman/MPFB CC0 data. Walk and run were merged upstream in UTMKL Campus Life.
+CC0-1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+https://www.innerscene.com/tools/library/3d-parts/relaxed-walk-sam-3d-person-animated-732f1206
+https://www.innerscene.com/tools/library/3d-parts/run-sam-3d-person-animated-fa008c06
+
+GAUSSIAN EXHIBITS
+Houseplant — Marcel Padilla, CC BY 4.0; unmodified SPLAT file.
+https://github.com/marcelpadilla/splats/tree/main/data/plant
+Shaded park walk — Necessity Robotics (xclean), CC BY 4.0. Recorded in India.
+https://necessityrobotics.github.io/explore.html?map=oak_160543
+https://huggingface.co/datasets/Pyassahu/xclean-maps/tree/main/maps_nrs/oak_160543
+Packaged with a 20 m radius crop at an original keyframe, yielding 122,490 retained Gaussians.
+CC BY 4.0 license: https://creativecommons.org/licenses/by/4.0/
+
+THREE.JS (MIT)
+The MIT License
+
+Copyright © 2010-2025 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+SPARK (MIT)
+The MIT License
+
+Copyright © 2025 WORLD LABS TECHNOLOGIES, INC.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
