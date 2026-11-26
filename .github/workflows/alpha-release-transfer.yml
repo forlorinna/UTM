@@ -1,0 +1,34 @@
+name: Transfer signed Android Alpha
+on:
+  push:
+    branches: [android-alpha-release-transfer]
+    paths: [.release-transfer/**, .github/workflows/alpha-release-transfer.yml]
+permissions:
+  contents: write
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble verified APK and upload to its draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: utmkl-real-world-v0.1.0-alpha
+        run: |
+          set -euo pipefail
+          apk=UTMKL_REAL_WORLD_v0.1.0_Alpha.apk
+          stage="$RUNNER_TEMP/alpha"
+          base="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$GITHUB_SHA/.release-transfer"
+          mkdir -p "$stage"
+          cd "$stage"
+          for suffix in 00 01 02; do
+            curl --fail --silent --show-error --retry 5 --output "part.$suffix" "$base/apk.part.$suffix"
+          done
+          for name in SHA256SUMS APK_VERIFICATION.txt; do
+            curl --fail --silent --show-error --retry 5 --output "$name" "$base/$name"
+          done
+          cat part.00 part.01 part.02 > "$apk"
+          sha256sum -c SHA256SUMS
+          unzip -tq "$apk"
+          gh release upload "$TAG" "$apk" SHA256SUMS APK_VERIFICATION.txt --repo "$GITHUB_REPOSITORY"
+          actual="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[] | select(.name=="UTMKL_REAL_WORLD_v0.1.0_Alpha.apk") | .size')"
+          test "$actual" = "$(stat -c %s "$apk")"

@@ -1,0 +1,14 @@
+APK bytes: 115458261
+6f006e35708c50a09436f74c2a149028bebc6e15c650ee9c6078cbbff67abff8  UTMKL_REAL_WORLD_v0.1.0_Alpha.apk
+BUILD SUCCESSFUL in 12s
+Verifies
+Verified using v3 scheme (APK Signature Scheme v3): true
+Signer #1 certificate SHA-256 digest: 15cd110285f026084af2bb0a48ef519e90ae24b0b289208d730d8ca9586efc45
+package: name='my.utmkl.realworld' versionCode='2' versionName='0.1.0 Alpha' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+targetSdkVersion:'36'
+application-label:'UTMKL REAL WORLD'
+No errors detected in compressed data of UTMKL_REAL_WORLD_v0.1.0_Alpha.apk.
+
+SDK: zipalign check passed. Certificate matches the previous public APK. Package contains no ABI-specific JNI libraries.
+Offline assets: 3 shared meshes, 36 KTX2 material textures, terrain metadata, HDR, decoder, external 122490-splat SPZ.
+Touch joystick, drag, pinch, jump, first/third-person, flight, all five graphics modes, PNG download, external Spark draw (122490 splats), and return to campus passed.
