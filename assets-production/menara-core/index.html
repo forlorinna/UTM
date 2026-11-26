@@ -3,7 +3,7 @@
 <head>
 <link rel="icon" href="data:,">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Menara Razak · 核心区步行样板</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 <header><div class="marker">UTM</div><div><h1>Menara Razak</h1><small>KUALA LUMPUR · 校园核心区</small></div></header>
 <div class="tools">
   <label for="quality">画质</label>
-  <select id="quality" aria-label="画质"><option>High</option><option>Ultra</option><option>Cinematic</option></select>
+  <select id="quality" aria-label="画质"><option>Low</option><option>Medium</option><option selected>High</option><option>Ultra</option><option>Cinematic</option></select>
   <button id="capture" disabled>截图</button>
 </div>
 <div class="controls">
@@ -22,7 +22,23 @@
 <div class="credits">© OpenStreetMap contributors · 场地局部尺度为重建估算</div>
 <div id="reticle" hidden></div>
 <div id="toast" role="status" hidden></div>
-<div id="loading" role="status">正在读取塔楼与场地资产…</div>
+<div id="mobile-controls" hidden>
+  <div id="joystick" aria-label="移动摇杆"><span></span></div>
+  <div class="actions">
+    <button id="camera-mode" type="button">第三人称</button>
+    <button id="flight" type="button" aria-pressed="false">飞行</button>
+    <button id="run" type="button">奔跑</button>
+    <button id="up" type="button">跳跃</button>
+    <button id="down" type="button" hidden>下降</button>
+  </div>
+  <button id="scan" type="button">高斯测试</button>
+  <div id="scan-label" hidden>独立测试 · 印度公园 · 122,490 Gaussians<br>Necessity Robotics · CC BY 4.0</div>
+</div>
+<div id="loading" role="status">
+  <div id="load-status">正在检测 WebGL 2…</div>
+  <progress id="progress" max="100" value="3"></progress>
+  <button id="retry" hidden type="button">使用安全画质重试</button>
+</div>
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>

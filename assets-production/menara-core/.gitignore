@@ -1,0 +1,9 @@
+node_modules/
+dist/
+public/mobile-assets/
+.texture-cache/
+android/app/src/main/assets/
+*.apk
+*.p12
+*.jks
+*.pass

@@ -1,0 +1,6 @@
+{
+  "appId": "my.utmkl.realworld",
+  "appName": "UTMKL REAL WORLD",
+  "webDir": "dist",
+  "android": { "allowMixedContent": false, "minWebViewVersion": 109 }
+}

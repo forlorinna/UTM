@@ -1,0 +1,65 @@
+import { chromium } from 'playwright-core';
+import assert from 'node:assert/strict';
+import { mkdirSync } from 'node:fs';
+
+const output=process.env.UTMKL_QA_OUTPUT||'/tmp/utmkl-mobile-qa';
+mkdirSync(output,{recursive:true});
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM||'/usr/bin/chromium',args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+try{
+  const page=await browser.newPage({viewport:{width:840,height:412},hasTouch:true,acceptDownloads:true});
+  page.setDefaultTimeout(125000);
+  const errors=[];
+  page.on('pageerror',error=>errors.push(error.message));
+  page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
+  await page.goto(process.env.CORE_MOBILE_URL||'http://127.0.0.1:4290/?mobileQA&qa',{waitUntil:'domcontentloaded'});
+  const read=()=>page.evaluate(()=>coreQA());
+  await page.waitForFunction(()=>window.coreQA&&coreQA().frames>0&&coreQA().triangles>1000);
+  const cdp=await page.context().newCDPSession(page);
+  const touch=(type, touchPoints)=>cdp.send('Input.dispatchTouchEvent',{type,touchPoints});
+  const tap=(x,y)=>page.touchscreen.tap(x,y);
+  await page.screenshot({path:`${output}/mobile-web-campus.png`});
+  const before=await read();
+  const pad=await page.locator('#joystick').boundingBox();
+  const joystick={x:Math.round(pad.x+pad.width*.5),y:Math.round(pad.y+pad.height*.15),id:1};
+  await touch('touchStart',[joystick]);
+  await page.waitForFunction(y=>coreQA().y>y+.3,before.y);
+  await touch('touchEnd',[]);
+  const yaw=(await read()).yaw;
+  await touch('touchStart',[{x:626,y:184,id:2}]);
+  await touch('touchMove',[{x:678,y:184,id:2}]);
+  await touch('touchEnd',[]);
+  assert.notEqual((await read()).yaw,yaw);
+  const fov=(await read()).fov;
+  await touch('touchStart',[{x:436,y:160,id:3},{x:542,y:160,id:4}]);
+  await touch('touchMove',[{x:392,y:160,id:3},{x:596,y:160,id:4}]);
+  await touch('touchEnd',[]);
+  assert.ok((await read()).fov<fov);
+  for(const mode of ['Low','Medium','High','Ultra','Cinematic','Low']){
+    await page.locator('#quality').selectOption(mode);
+    assert.equal((await read()).mode,mode);
+  }
+  await page.locator('#camera-mode').tap();
+  assert.equal((await read()).third,true);
+  await page.screenshot({path:`${output}/mobile-web-third-person.png`});
+  await page.locator('#camera-mode').tap();
+  await page.locator('#up').tap();
+  await page.waitForFunction(()=>coreQA().jump>.08);
+  await page.locator('#flight').tap();
+  const up=await page.locator('#up').boundingBox();
+  await touch('touchStart',[{x:Math.round(up.x+up.width/2),y:Math.round(up.y+up.height/2),id:5}]);
+  await page.waitForFunction(()=>coreQA().lift>.45);
+  await touch('touchEnd',[]);
+  await page.locator('#flight').tap();
+  const saved=page.waitForEvent('download');
+  await page.locator('#capture').tap();
+  await (await saved).saveAs(`${output}/mobile-web-photo.png`);
+  await page.locator('#scan').tap();
+  await page.waitForFunction(()=>coreQA().splats>0);
+  await page.screenshot({path:`${output}/mobile-web-external-scan.png`});
+  const drawn=(await read()).splats;
+  await page.locator('#scan').tap();
+  await page.waitForFunction(()=>coreQA().splats===0);
+  await page.waitForTimeout(700);
+  assert.deepEqual(errors,[]);
+  console.log(`Touch joystick, drag, pinch, jump, first/third-person, flight, all five graphics modes, PNG download, external Spark draw (${drawn} splats), and return to campus passed.`);
+}finally{await browser.close();}

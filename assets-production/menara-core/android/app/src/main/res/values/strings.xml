@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">UTMKL REAL WORLD</string>
+    <string name="title_activity_main">UTMKL REAL WORLD</string>
+    <string name="package_name">my.utmkl.realworld</string>
+    <string name="custom_url_scheme">my.utmkl.realworld</string>
+</resources>
