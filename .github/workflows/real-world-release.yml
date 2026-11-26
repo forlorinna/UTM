@@ -1,0 +1,44 @@
+name: Attach Real World Android preview
+
+on:
+  push:
+    branches: [utmkl-real-world-android]
+    paths:
+      - '.github/workflows/real-world-release.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: utmkl-real-world-preview
+
+jobs:
+  attach:
+    if: github.repository == 'forlorinna/UTM'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: utmkl-real-world-v0.1.0
+      APK: UTMKL-Real-World-0.1.0.apk
+      EXPECTED_SHA: 5b64cb87c49ef475e9eb0a680eabd2fd10d9b38e88f55955c784043dcd37d995
+    steps:
+      - name: Fetch the signed preview and check its SHA-256
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          base="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$GITHUB_SHA/android-real-world/releases"
+          curl --fail --location --retry 3 --output "$APK" "$base/$APK"
+          printf '%s  %s\n' "$EXPECTED_SHA" "$APK" | sha256sum --check
+      - name: Upload and verify the release asset
+        shell: bash
+        run: |
+          set -euo pipefail
+          saved="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets,isDraft)"
+          if ! jq -e --arg n "$APK" '.assets | any(.name == $n)' <<< "$saved" >/dev/null; then
+            gh release upload "$TAG" "$RUNNER_TEMP/$APK" --repo "$GITHUB_REPOSITORY"
+          fi
+          api_url="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json apiUrl --jq .apiUrl)"
+          gh api "$api_url" | jq -e --arg n "$APK" --arg d "sha256:$EXPECTED_SHA" \
+            '.assets | any(.name == $n and .state == "uploaded" and .digest == $d)'
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --prerelease --latest=false
