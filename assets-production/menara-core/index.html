@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="data:,">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menara Razak · 核心区步行样板</title>
+</head>
+<body>
+<main id="world" aria-label="Menara Razak 3D 场景"></main>
+<div class="shade"></div>
+<header><div class="marker">UTM</div><div><h1>Menara Razak</h1><small>KUALA LUMPUR · 校园核心区</small></div></header>
+<div class="tools">
+  <label for="quality">画质</label>
+  <select id="quality" aria-label="画质"><option>High</option><option>Ultra</option><option>Cinematic</option></select>
+  <button id="capture" disabled>截图</button>
+</div>
+<div class="controls">
+  <b>步行</b><span>WASD 移动 · 拖动视角 · 点击场景锁定鼠标</span>
+  <span class="fine">R 返回入口 · P 截图 · Esc 释放鼠标</span>
+</div>
+<div class="credits">© OpenStreetMap contributors · 场地局部尺度为重建估算</div>
+<div id="reticle" hidden></div>
+<div id="toast" role="status" hidden></div>
+<div id="loading" role="status">正在读取塔楼与场地资产…</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

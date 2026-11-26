@@ -1,0 +1,57 @@
+import {chromium} from 'playwright-core';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM||'/usr/bin/chromium',headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+try{
+  const page=await browser.newPage({viewport:{width:850,height:480},acceptDownloads:true,deviceScaleFactor:1});
+  page.setDefaultTimeout(100000);
+  const errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  page.on('console',m=>{if(m.type()==='error')errors.push(m.text()+' '+m.location().url);});
+  page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
+  await page.goto(new URL('?qa',process.env.CORE_QA_URL||'http://127.0.0.1:4287/').href,{waitUntil:'domcontentloaded'});
+  const qa=()=>page.evaluate(()=>coreQA());
+  console.log('Loaded production build');
+  await page.waitForFunction(()=>window.coreQA&&coreQA().frames>0&&coreQA().triangles>1000);
+  let state=await qa();
+  assert.equal(state.stale,7);
+  assert.equal(state.wall,false);
+  assert.equal(state.shadows,1024);
+  fs.mkdirSync('evidence',{recursive:true});
+  await page.screenshot({path:'evidence/01_Walk_Entrance.png'});
+  for(const [option,size] of [['Ultra',1536],['Cinematic',2048],['High',1024]]) {
+    await page.locator('#quality').selectOption(option);
+    state=await qa();
+    assert.equal(state.mode,option);
+    assert.equal(state.shadows,size);
+  }
+  await page.evaluate(()=>coreQAPosition(-3,-11.75));
+  const beforeStairs=await qa();
+  assert.ok(beforeStairs.eye<2.0);
+  await page.mouse.move(440,250);
+  await page.mouse.down();
+  await page.mouse.move(446,247);
+  await page.mouse.up();
+  await page.keyboard.down('w');
+  await page.waitForFunction(()=>coreQA().y>-9.96,{},{polling:250});
+  await page.waitForTimeout(1100);
+  await page.keyboard.up('w');
+  state=await qa();
+  assert.ok(state.y>-9.96&&state.y<-9.795);
+  assert.ok(state.view[2]>9.79);
+  assert.ok(state.eye>2.10);
+  console.log(`Four stair treads and door stop: y ${beforeStairs.y.toFixed(3)} → ${state.y.toFixed(3)}, eye ${beforeStairs.eye.toFixed(3)} → ${state.eye.toFixed(3)} m, camera ${state.view.map(v=>v.toFixed(3)).join(', ')}`);
+  await page.evaluate(()=>coreQAPosition(-3,-12.5,0,-.22));
+  await page.waitForTimeout(800);
+  await page.screenshot({path:'evidence/02_Stairs_Collision.png'});
+  await page.keyboard.press('r');
+  assert.ok(Math.abs((await qa()).y+34.2)<.01);
+  await page.evaluate(()=>coreQAPosition(-43.8,-38,-.79,.37));
+  await page.waitForTimeout(1500);
+  await page.screenshot({path:'evidence/03_Walk_Oblique.png'});
+  const download=page.waitForEvent('download',{timeout:100000});
+  await page.locator('#capture').click();
+  await (await download).saveAs('evidence/04_Walk_Capture.png');
+  assert.deepEqual(errors,[]);
+  console.log('Offline build QA: WebGL 2, all three presets, mouse drag, WASD, stair height, facade/camera stop, reset, and PNG download passed.');
+}finally{await browser.close();}

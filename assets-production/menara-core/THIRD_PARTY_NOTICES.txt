@@ -1,0 +1,39 @@
+Core map geometry
+OpenStreetMap contributors, Open Database License 1.0
+https://www.openstreetmap.org/copyright
+The clipped geometry and derived site data are in assets/site.json. See the main project for the upstream extract.
+UTM photographs and maps were consulted as references. None of the reference photos are distributed with the runtime.
+
+Poly Haven CC0 assets
+https://polyhaven.com/license
+https://polyhaven.com/a/leafy_grass
+https://polyhaven.com/a/asphalt_track
+https://polyhaven.com/a/island_tree_02
+https://polyhaven.com/a/street_lamp_01
+https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky
+The terrain is locally graded. Leafy Grass base colour was corrected and the textures were resized.
+The original Menara Razak model, mesh signs, and architectural maps are inherited from forlorinna/UTM.
+https://github.com/forlorinna/UTM/tree/menara-razak-assets/assets-production/menara-razak
+
+THREE.JS (MIT)
+The MIT License
+
+Copyright © 2010-2025 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

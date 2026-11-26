@@ -1,0 +1,23 @@
+RENDER 01_Daylight_Front 1920×1080 Cycles CPU max 46
+Saved: renders/01_Daylight_Front.png
+Time: 03:29.53 (Saving: 00:00.78)
+
+RENDER 02_Daylight_Oblique 1920×1080 Cycles CPU max 42
+Saved: renders/02_Daylight_Oblique.png
+Time: 06:13.68 (Saving: 00:00.51)
+
+RENDER 03_Entrance 1920×1080 Cycles CPU max 44
+Saved: renders/03_Entrance.png
+Time: 04:03.39 (Saving: 00:00.61)
+
+RENDER 04_Crown_Detail 1920×1080 Cycles CPU max 40
+Saved: renders/04_Crown_Detail.png
+Time: 02:57.23 (Saving: 00:00.27)
+
+RENDER 05_Dusk 1920×1080 Cycles CPU max 46
+Saved: renders/05_Dusk.png
+Time: 03:01.59 (Saving: 00:00.62)
+
+RENDER 06_After_Rain 1920×1080 Cycles CPU max 52
+Saved: renders/06_After_Rain.png
+Time: 04:16.19 (Saving: 00:00.26)

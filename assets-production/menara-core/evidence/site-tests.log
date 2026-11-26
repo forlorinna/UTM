@@ -1,0 +1,15 @@
+
+> menara-razak-core@0.1.0 test
+> node --test qa/site.test.mjs
+
+✔ spawn, road, front and rear remain walkable (12.550417ms)
+✔ ordered entrance treads and blocked door (5.75294ms)
+✔ facade, mapped neighbors, columns and boundaries block traversal (19.018889ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 111.4409
